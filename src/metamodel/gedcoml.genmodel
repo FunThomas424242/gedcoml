@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.github.funthomas424242.gedcoml/src/main/src-gen"
+    editDirectory="/com.github.funthomas424242.gedcoml.edit/src" editorDirectory="/com.github.funthomas424242.gedcoml.editor/src"
+    modelPluginID="com.github.funthomas424242.gedcoml" modelName="gedcoml" modelPluginClass=""
+    editPluginClass="com.github.funthomas424242.gedcoml.provider.gedcomlEditPlugin"
+    editorPluginClass="com.github.funthomas424242.gedcoml.presentation.gedcomlEditorPlugin"
+    testSuiteClass="com.github.funthomas424242.gedcoml.tests.gedcomlAllTests" complianceLevel="5.0"
+    copyrightFields="false" editPluginID="com.github.funthomas424242.gedcoml.edit"
+    editorPluginID="com.github.funthomas424242.gedcoml.editor">
+  <genPackages prefix="Gedcoml" basePackage="com.github.funthomas424242.gedcoml" disposableProviderFactory="true"
+      ecorePackage="gedcoml.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gedcoml.ecore#//Sexus">
+      <genEnumLiterals ecoreEnumLiteral="gedcoml.ecore#//Sexus/male"/>
+      <genEnumLiterals ecoreEnumLiteral="gedcoml.ecore#//Sexus/female"/>
+      <genEnumLiterals ecoreEnumLiteral="gedcoml.ecore#//Sexus/undefined"/>
+    </genEnums>
+    <genClasses ecoreClass="gedcoml.ecore#//Projectdescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Projectdescription/groupId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Projectdescription/artifactId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Projectdescription/version"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Projectdescription/imports"/>
+    </genClasses>
+    <genClasses ecoreClass="gedcoml.ecore#//Family">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Family/members"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Family/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Family/imports"/>
+    </genClasses>
+    <genClasses ecoreClass="gedcoml.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/lastName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/middleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/birthDay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/sex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/deathDay"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Person/addresses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Person/biologicalParentOf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Person/biologicalFatherIs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Person/biologicalMotherIs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Person/marriedWith"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Person/notes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/birthName"/>
+    </genClasses>
+    <genClasses ecoreClass="gedcoml.ecore#//FamilyBook">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gedcoml.ecore#//FamilyBook/project"/>
+    </genClasses>
+    <genClasses ecoreClass="gedcoml.ecore#//FamilyImport">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gedcoml.ecore#//FamilyImport/importedResource"/>
+    </genClasses>
+    <genClasses ecoreClass="gedcoml.ecore#//PostAddress">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//PostAddress/street"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//PostAddress/postcode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//PostAddress/city"/>
+    </genClasses>
+    <genClasses ecoreClass="gedcoml.ecore#//Address">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Address/entry"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Address/exodus"/>
+    </genClasses>
+    <genClasses ecoreClass="gedcoml.ecore#//Married">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Married/weddingDay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Married/separationDay"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Married/partner"/>
+    </genClasses>
+    <genClasses ecoreClass="gedcoml.ecore#//Note">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Note/content"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
