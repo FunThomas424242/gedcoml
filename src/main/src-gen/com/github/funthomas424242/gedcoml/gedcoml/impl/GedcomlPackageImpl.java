@@ -7,6 +7,7 @@
 package com.github.funthomas424242.gedcoml.gedcoml.impl;
 
 import com.github.funthomas424242.gedcoml.gedcoml.Address;
+import com.github.funthomas424242.gedcoml.gedcoml.Author;
 import com.github.funthomas424242.gedcoml.gedcoml.Family;
 import com.github.funthomas424242.gedcoml.gedcoml.FamilyBook;
 import com.github.funthomas424242.gedcoml.gedcoml.FamilyImport;
@@ -97,6 +98,13 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
    * @generated
    */
   private EClass noteEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass authorEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -216,6 +224,26 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
   public EReference getProjectdescription_Imports()
   {
     return (EReference)projectdescriptionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getProjectdescription_Author()
+  {
+    return (EReference)projectdescriptionEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getProjectdescription_PublishingDate()
+  {
+    return (EAttribute)projectdescriptionEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -583,6 +611,46 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getAuthor()
+  {
+    return authorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAuthor_FirstName()
+  {
+    return (EAttribute)authorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAuthor_LastName()
+  {
+    return (EAttribute)authorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAuthor_MemberId()
+  {
+    return (EReference)authorEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getSexus()
   {
     return sexusEEnum;
@@ -623,6 +691,8 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
     createEAttribute(projectdescriptionEClass, PROJECTDESCRIPTION__ARTIFACT_ID);
     createEAttribute(projectdescriptionEClass, PROJECTDESCRIPTION__VERSION);
     createEReference(projectdescriptionEClass, PROJECTDESCRIPTION__IMPORTS);
+    createEReference(projectdescriptionEClass, PROJECTDESCRIPTION__AUTHOR);
+    createEAttribute(projectdescriptionEClass, PROJECTDESCRIPTION__PUBLISHING_DATE);
 
     familyEClass = createEClass(FAMILY);
     createEReference(familyEClass, FAMILY__MEMBERS);
@@ -668,6 +738,11 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
     noteEClass = createEClass(NOTE);
     createEAttribute(noteEClass, NOTE__CONTENT);
 
+    authorEClass = createEClass(AUTHOR);
+    createEAttribute(authorEClass, AUTHOR__FIRST_NAME);
+    createEAttribute(authorEClass, AUTHOR__LAST_NAME);
+    createEReference(authorEClass, AUTHOR__MEMBER_ID);
+
     // Create enums
     sexusEEnum = createEEnum(SEXUS);
   }
@@ -709,6 +784,8 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
     initEAttribute(getProjectdescription_ArtifactId(), ecorePackage.getEString(), "artifactId", null, 1, 1, Projectdescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProjectdescription_Version(), ecorePackage.getEString(), "version", null, 1, 1, Projectdescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getProjectdescription_Imports(), this.getFamilyImport(), null, "imports", null, 0, -1, Projectdescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProjectdescription_Author(), this.getAuthor(), null, "author", null, 1, 1, Projectdescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProjectdescription_PublishingDate(), ecorePackage.getEString(), "publishingDate", null, 1, 1, Projectdescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(familyEClass, Family.class, "Family", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFamily_Members(), this.getPerson(), null, "members", null, 1, -1, Family.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -753,6 +830,11 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
 
     initEClass(noteEClass, Note.class, "Note", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNote_Content(), ecorePackage.getEString(), "content", null, 1, 1, Note.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(authorEClass, Author.class, "Author", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAuthor_FirstName(), ecorePackage.getEString(), "firstName", null, 1, 1, Author.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAuthor_LastName(), ecorePackage.getEString(), "lastName", null, 1, 1, Author.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAuthor_MemberId(), this.getPerson(), null, "memberId", null, 0, 1, Author.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(sexusEEnum, Sexus.class, "Sexus");

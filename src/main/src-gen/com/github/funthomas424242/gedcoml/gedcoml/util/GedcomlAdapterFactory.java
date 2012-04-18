@@ -124,6 +124,11 @@ public class GedcomlAdapterFactory extends AdapterFactoryImpl
         return createNoteAdapter();
       }
       @Override
+      public Adapter caseAuthor(Author object)
+      {
+        return createAuthorAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -276,6 +281,21 @@ public class GedcomlAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createNoteAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.gedcoml.gedcoml.Author <em>Author</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.Author
+   * @generated
+   */
+  public Adapter createAuthorAdapter()
   {
     return null;
   }

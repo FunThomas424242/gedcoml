@@ -108,13 +108,31 @@ public interface GedcomlPackage extends EPackage
   int PROJECTDESCRIPTION__IMPORTS = 3;
 
   /**
+   * The feature id for the '<em><b>Author</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROJECTDESCRIPTION__AUTHOR = 4;
+
+  /**
+   * The feature id for the '<em><b>Publishing Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROJECTDESCRIPTION__PUBLISHING_DATE = 5;
+
+  /**
    * The number of structural features of the '<em>Projectdescription</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROJECTDESCRIPTION_FEATURE_COUNT = 4;
+  int PROJECTDESCRIPTION_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.FamilyImpl <em>Family</em>}' class.
@@ -539,6 +557,52 @@ public interface GedcomlPackage extends EPackage
   int NOTE_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.AuthorImpl <em>Author</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.gedcoml.gedcoml.impl.AuthorImpl
+   * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getAuthor()
+   * @generated
+   */
+  int AUTHOR = 9;
+
+  /**
+   * The feature id for the '<em><b>First Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AUTHOR__FIRST_NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Last Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AUTHOR__LAST_NAME = 1;
+
+  /**
+   * The feature id for the '<em><b>Member Id</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AUTHOR__MEMBER_ID = 2;
+
+  /**
+   * The number of structural features of the '<em>Author</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AUTHOR_FEATURE_COUNT = 3;
+
+  /**
    * The meta object id for the '{@link com.github.funthomas424242.gedcoml.gedcoml.Sexus <em>Sexus</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -546,7 +610,7 @@ public interface GedcomlPackage extends EPackage
    * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getSexus()
    * @generated
    */
-  int SEXUS = 9;
+  int SEXUS = 10;
 
 
   /**
@@ -602,6 +666,28 @@ public interface GedcomlPackage extends EPackage
    * @generated
    */
   EReference getProjectdescription_Imports();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.github.funthomas424242.gedcoml.gedcoml.Projectdescription#getAuthor <em>Author</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Author</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.Projectdescription#getAuthor()
+   * @see #getProjectdescription()
+   * @generated
+   */
+  EReference getProjectdescription_Author();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.Projectdescription#getPublishingDate <em>Publishing Date</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Publishing Date</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.Projectdescription#getPublishingDate()
+   * @see #getProjectdescription()
+   * @generated
+   */
+  EAttribute getProjectdescription_PublishingDate();
 
   /**
    * Returns the meta object for class '{@link com.github.funthomas424242.gedcoml.gedcoml.Family <em>Family</em>}'.
@@ -992,6 +1078,49 @@ public interface GedcomlPackage extends EPackage
   EAttribute getNote_Content();
 
   /**
+   * Returns the meta object for class '{@link com.github.funthomas424242.gedcoml.gedcoml.Author <em>Author</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Author</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.Author
+   * @generated
+   */
+  EClass getAuthor();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.Author#getFirstName <em>First Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>First Name</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.Author#getFirstName()
+   * @see #getAuthor()
+   * @generated
+   */
+  EAttribute getAuthor_FirstName();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.Author#getLastName <em>Last Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Last Name</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.Author#getLastName()
+   * @see #getAuthor()
+   * @generated
+   */
+  EAttribute getAuthor_LastName();
+
+  /**
+   * Returns the meta object for the reference '{@link com.github.funthomas424242.gedcoml.gedcoml.Author#getMemberId <em>Member Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Member Id</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.Author#getMemberId()
+   * @see #getAuthor()
+   * @generated
+   */
+  EReference getAuthor_MemberId();
+
+  /**
    * Returns the meta object for enum '{@link com.github.funthomas424242.gedcoml.gedcoml.Sexus <em>Sexus</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1065,6 +1194,22 @@ public interface GedcomlPackage extends EPackage
      * @generated
      */
     EReference PROJECTDESCRIPTION__IMPORTS = eINSTANCE.getProjectdescription_Imports();
+
+    /**
+     * The meta object literal for the '<em><b>Author</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROJECTDESCRIPTION__AUTHOR = eINSTANCE.getProjectdescription_Author();
+
+    /**
+     * The meta object literal for the '<em><b>Publishing Date</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROJECTDESCRIPTION__PUBLISHING_DATE = eINSTANCE.getProjectdescription_PublishingDate();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.FamilyImpl <em>Family</em>}' class.
@@ -1369,6 +1514,40 @@ public interface GedcomlPackage extends EPackage
      * @generated
      */
     EAttribute NOTE__CONTENT = eINSTANCE.getNote_Content();
+
+    /**
+     * The meta object literal for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.AuthorImpl <em>Author</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.github.funthomas424242.gedcoml.gedcoml.impl.AuthorImpl
+     * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getAuthor()
+     * @generated
+     */
+    EClass AUTHOR = eINSTANCE.getAuthor();
+
+    /**
+     * The meta object literal for the '<em><b>First Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AUTHOR__FIRST_NAME = eINSTANCE.getAuthor_FirstName();
+
+    /**
+     * The meta object literal for the '<em><b>Last Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AUTHOR__LAST_NAME = eINSTANCE.getAuthor_LastName();
+
+    /**
+     * The meta object literal for the '<em><b>Member Id</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AUTHOR__MEMBER_ID = eINSTANCE.getAuthor_MemberId();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.gedcoml.gedcoml.Sexus <em>Sexus</em>}' enum.

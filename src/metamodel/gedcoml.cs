@@ -22,17 +22,17 @@ TOKENS {
 	//DEFINE INTEGER $('-')?('1'..'9')('0'..'9')*|'0'$;
 	//DEFINE FLOAT $('-')?(('1'..'9') ('0'..'9')* | '0') '.' ('0'..'9')+ $;
 	DEFINE ID $('\'')('#')$ + TEXT + $('\'') $;
-	DEFINE DATUM $('0'..'9') ('0'..'9') '.' ('0'..'9') ('0'..'9') '.' ('0'..'9') ('0'..'9')('0'..'9') ('0'..'9')$;
+	DEFINE DATE $('0'..'9') ('0'..'9') '.' ('0'..'9') ('0'..'9') '.' ('0'..'9') ('0'..'9')('0'..'9') ('0'..'9')$;
 	//DEFINE NUMBER  $('0'..'9')+$;
 }
 
 
 TOKENSTYLES {
-	"DATUM" COLOR #00FF00 ;
+	"DATE" COLOR #00FF00 ;
 	"Projectdescription" COLOR #7F0055, BOLD;
-	"groupId" COLOR #7F0055, BOLD;
-	"artifactId" COLOR #7F0055, BOLD;
-	"version" COLOR #7F0055, BOLD;
+	"groupId:" COLOR #7F0055, BOLD;
+	"artifactId:" COLOR #7F0055, BOLD;
+	"version:" COLOR #7F0055, BOLD;
 	"import family" COLOR #7F0055, BOLD;
 	"Family" COLOR #7F0055, BOLD;
 	"Person" COLOR #7F0055, BOLD;
@@ -65,10 +65,13 @@ TOKENSTYLES {
 RULES {
 	FamilyBook ::= "FamilyBook" "{"  project? "}";
 	Projectdescription ::= "Projectdescription" "{" 
-		"groupId" ":" groupId['"','"']  
-		"artifactId" ":" artifactId['"','"']  
-		"version" ":" version['"','"']  
+		"groupId:" groupId['"','"']  "."
+		"artifactId:" artifactId['"','"']  "."
+		"version:" version['"','"']  "."
+		author
+		"publishingDate:" publishingDate[DATE] "."
 		imports* "}";
+	Author::= "Author" "{" "FirstName:" firstName['"','"'] "LastName:" lastName['"','"'] "MemberId:" memberId['"','"']? ;
 	Family ::= "Family"  name['"','"'] "{" imports* members+  "}";
 	Person ::= "Person" "{" "Id" ":" id['"','"'] "."
 							"Name at birth:" birthName['"','"'] "."
@@ -76,8 +79,8 @@ RULES {
 							"MiddleName:" middleName['"','"']? "."
 			  			    "LastName:" lastName['"','"'] "."			  			    			  			 
 			  			    "Sex:" sex[male:"male", female:"female", undefined:"undefined"] "."
-			  			    "BirthDay:" birthDay[DATUM] "."
-			  			    "DeathDay:" deathDay[DATUM]? "."
+			  			    "BirthDay:" birthDay[DATE] "."
+			  			    "DeathDay:" deathDay[DATE]? "."
 			  			    "BiologicalFatherIs:"  biologicalFatherIs['"','"'] "."
 			  			    "BiologicalMotherIs:"  biologicalMotherIs['"','"'] "."		  			   
 			  			    "BiologicalParentOf:"  (  biologicalParentOf['"','"'] (",")?  )*  "."
@@ -86,13 +89,13 @@ RULES {
 			  			     notes* "}";
 
 	FamilyImport ::= "import family"  importedResource['"','"']  ".";
-	PostAddress ::= "PostAddress" "{" "Entry:" entry[DATUM]  "."
-									  "Exodus:" exodus[DATUM]? "."
+	PostAddress ::= "PostAddress" "{" "Entry:" entry[DATE]  "."
+									  "Exodus:" exodus[DATE]? "."
 									  "Street:" street['"','"'] "."
 									  "Postcode:" postcode['"','"'] "."
 									  "City:" city['"','"'] "." "}";
-	Married ::= "Married" "{" "WeddingDay:" weddingDay[DATUM] "."
-							  "SeparationDay:" separationDay[DATUM]? "."
+	Married ::= "Married" "{" "WeddingDay:" weddingDay[DATE] "."
+							  "SeparationDay:" separationDay[DATE]? "."
 							  "Partner:" partner['"','"'] "." "}";
 	Note ::= "Note" "{" content['"','"'] "}";
 }

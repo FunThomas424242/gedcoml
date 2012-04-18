@@ -77,6 +77,7 @@ public class GedcomlFactoryImpl extends EFactoryImpl implements GedcomlFactory
       case GedcomlPackage.POST_ADDRESS: return createPostAddress();
       case GedcomlPackage.MARRIED: return createMarried();
       case GedcomlPackage.NOTE: return createNote();
+      case GedcomlPackage.AUTHOR: return createAuthor();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -202,6 +203,17 @@ public class GedcomlFactoryImpl extends EFactoryImpl implements GedcomlFactory
   {
     NoteImpl note = new NoteImpl();
     return note;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Author createAuthor()
+  {
+    AuthorImpl author = new AuthorImpl();
+    return author;
   }
 
   /**

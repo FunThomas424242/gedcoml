@@ -6,6 +6,7 @@
  */
 package com.github.funthomas424242.gedcoml.gedcoml.impl;
 
+import com.github.funthomas424242.gedcoml.gedcoml.Author;
 import com.github.funthomas424242.gedcoml.gedcoml.FamilyImport;
 import com.github.funthomas424242.gedcoml.gedcoml.GedcomlPackage;
 import com.github.funthomas424242.gedcoml.gedcoml.Projectdescription;
@@ -37,6 +38,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.impl.ProjectdescriptionImpl#getArtifactId <em>Artifact Id</em>}</li>
  *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.impl.ProjectdescriptionImpl#getVersion <em>Version</em>}</li>
  *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.impl.ProjectdescriptionImpl#getImports <em>Imports</em>}</li>
+ *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.impl.ProjectdescriptionImpl#getAuthor <em>Author</em>}</li>
+ *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.impl.ProjectdescriptionImpl#getPublishingDate <em>Publishing Date</em>}</li>
  * </ul>
  * </p>
  *
@@ -113,6 +116,36 @@ public class ProjectdescriptionImpl extends EObjectImpl implements Projectdescri
    * @ordered
    */
   protected EList<FamilyImport> imports;
+
+  /**
+   * The cached value of the '{@link #getAuthor() <em>Author</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAuthor()
+   * @generated
+   * @ordered
+   */
+  protected Author author;
+
+  /**
+   * The default value of the '{@link #getPublishingDate() <em>Publishing Date</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPublishingDate()
+   * @generated
+   * @ordered
+   */
+  protected static final String PUBLISHING_DATE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getPublishingDate() <em>Publishing Date</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPublishingDate()
+   * @generated
+   * @ordered
+   */
+  protected String publishingDate = PUBLISHING_DATE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -223,6 +256,77 @@ public class ProjectdescriptionImpl extends EObjectImpl implements Projectdescri
    * <!-- end-user-doc -->
    * @generated
    */
+  public Author getAuthor()
+  {
+    return author;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAuthor(Author newAuthor, NotificationChain msgs)
+  {
+    Author oldAuthor = author;
+    author = newAuthor;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GedcomlPackage.PROJECTDESCRIPTION__AUTHOR, oldAuthor, newAuthor);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAuthor(Author newAuthor)
+  {
+    if (newAuthor != author)
+    {
+      NotificationChain msgs = null;
+      if (author != null)
+        msgs = ((InternalEObject)author).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GedcomlPackage.PROJECTDESCRIPTION__AUTHOR, null, msgs);
+      if (newAuthor != null)
+        msgs = ((InternalEObject)newAuthor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GedcomlPackage.PROJECTDESCRIPTION__AUTHOR, null, msgs);
+      msgs = basicSetAuthor(newAuthor, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GedcomlPackage.PROJECTDESCRIPTION__AUTHOR, newAuthor, newAuthor));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getPublishingDate()
+  {
+    return publishingDate;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPublishingDate(String newPublishingDate)
+  {
+    String oldPublishingDate = publishingDate;
+    publishingDate = newPublishingDate;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GedcomlPackage.PROJECTDESCRIPTION__PUBLISHING_DATE, oldPublishingDate, publishingDate));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -230,6 +334,8 @@ public class ProjectdescriptionImpl extends EObjectImpl implements Projectdescri
     {
       case GedcomlPackage.PROJECTDESCRIPTION__IMPORTS:
         return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
+      case GedcomlPackage.PROJECTDESCRIPTION__AUTHOR:
+        return basicSetAuthor(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -252,6 +358,10 @@ public class ProjectdescriptionImpl extends EObjectImpl implements Projectdescri
         return getVersion();
       case GedcomlPackage.PROJECTDESCRIPTION__IMPORTS:
         return getImports();
+      case GedcomlPackage.PROJECTDESCRIPTION__AUTHOR:
+        return getAuthor();
+      case GedcomlPackage.PROJECTDESCRIPTION__PUBLISHING_DATE:
+        return getPublishingDate();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -280,6 +390,12 @@ public class ProjectdescriptionImpl extends EObjectImpl implements Projectdescri
         getImports().clear();
         getImports().addAll((Collection<? extends FamilyImport>)newValue);
         return;
+      case GedcomlPackage.PROJECTDESCRIPTION__AUTHOR:
+        setAuthor((Author)newValue);
+        return;
+      case GedcomlPackage.PROJECTDESCRIPTION__PUBLISHING_DATE:
+        setPublishingDate((String)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -306,6 +422,12 @@ public class ProjectdescriptionImpl extends EObjectImpl implements Projectdescri
       case GedcomlPackage.PROJECTDESCRIPTION__IMPORTS:
         getImports().clear();
         return;
+      case GedcomlPackage.PROJECTDESCRIPTION__AUTHOR:
+        setAuthor((Author)null);
+        return;
+      case GedcomlPackage.PROJECTDESCRIPTION__PUBLISHING_DATE:
+        setPublishingDate(PUBLISHING_DATE_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -328,6 +450,10 @@ public class ProjectdescriptionImpl extends EObjectImpl implements Projectdescri
         return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
       case GedcomlPackage.PROJECTDESCRIPTION__IMPORTS:
         return imports != null && !imports.isEmpty();
+      case GedcomlPackage.PROJECTDESCRIPTION__AUTHOR:
+        return author != null;
+      case GedcomlPackage.PROJECTDESCRIPTION__PUBLISHING_DATE:
+        return PUBLISHING_DATE_EDEFAULT == null ? publishingDate != null : !PUBLISHING_DATE_EDEFAULT.equals(publishingDate);
     }
     return super.eIsSet(featureID);
   }
@@ -349,6 +475,8 @@ public class ProjectdescriptionImpl extends EObjectImpl implements Projectdescri
     result.append(artifactId);
     result.append(", version: ");
     result.append(version);
+    result.append(", publishingDate: ");
+    result.append(publishingDate);
     result.append(')');
     return result.toString();
   }

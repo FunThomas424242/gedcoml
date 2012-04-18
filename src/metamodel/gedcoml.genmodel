@@ -21,6 +21,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Projectdescription/artifactId"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Projectdescription/version"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Projectdescription/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Projectdescription/author"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Projectdescription/publishingDate"/>
     </genClasses>
     <genClasses ecoreClass="gedcoml.ecore#//Family">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Family/members"/>
@@ -65,6 +67,11 @@
     </genClasses>
     <genClasses ecoreClass="gedcoml.ecore#//Note">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Note/content"/>
+    </genClasses>
+    <genClasses ecoreClass="gedcoml.ecore#//Author">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Author/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Author/lastName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Author/memberId"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

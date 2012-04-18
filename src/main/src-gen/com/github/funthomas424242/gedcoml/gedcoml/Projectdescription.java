@@ -22,6 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.Projectdescription#getArtifactId <em>Artifact Id</em>}</li>
  *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.Projectdescription#getVersion <em>Version</em>}</li>
  *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.Projectdescription#getImports <em>Imports</em>}</li>
+ *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.Projectdescription#getAuthor <em>Author</em>}</li>
+ *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.Projectdescription#getPublishingDate <em>Publishing Date</em>}</li>
  * </ul>
  * </p>
  *
@@ -124,5 +126,57 @@ public interface Projectdescription extends EObject
    * @generated
    */
   EList<FamilyImport> getImports();
+
+  /**
+   * Returns the value of the '<em><b>Author</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Author</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Author</em>' containment reference.
+   * @see #setAuthor(Author)
+   * @see com.github.funthomas424242.gedcoml.gedcoml.GedcomlPackage#getProjectdescription_Author()
+   * @model containment="true" required="true"
+   * @generated
+   */
+  Author getAuthor();
+
+  /**
+   * Sets the value of the '{@link com.github.funthomas424242.gedcoml.gedcoml.Projectdescription#getAuthor <em>Author</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Author</em>' containment reference.
+   * @see #getAuthor()
+   * @generated
+   */
+  void setAuthor(Author value);
+
+  /**
+   * Returns the value of the '<em><b>Publishing Date</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Publishing Date</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Publishing Date</em>' attribute.
+   * @see #setPublishingDate(String)
+   * @see com.github.funthomas424242.gedcoml.gedcoml.GedcomlPackage#getProjectdescription_PublishingDate()
+   * @model required="true"
+   * @generated
+   */
+  String getPublishingDate();
+
+  /**
+   * Sets the value of the '{@link com.github.funthomas424242.gedcoml.gedcoml.Projectdescription#getPublishingDate <em>Publishing Date</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Publishing Date</em>' attribute.
+   * @see #getPublishingDate()
+   * @generated
+   */
+  void setPublishingDate(String value);
 
 } // Projectdescription
