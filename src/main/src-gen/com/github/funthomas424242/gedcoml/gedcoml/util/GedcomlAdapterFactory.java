@@ -129,6 +129,21 @@ public class GedcomlAdapterFactory extends AdapterFactoryImpl
         return createAuthorAdapter();
       }
       @Override
+      public Adapter caseSource(Source object)
+      {
+        return createSourceAdapter();
+      }
+      @Override
+      public Adapter caseOthers(Others object)
+      {
+        return createOthersAdapter();
+      }
+      @Override
+      public Adapter casePersonRef(PersonRef object)
+      {
+        return createPersonRefAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -296,6 +311,51 @@ public class GedcomlAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAuthorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.gedcoml.gedcoml.Source <em>Source</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.Source
+   * @generated
+   */
+  public Adapter createSourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.gedcoml.gedcoml.Others <em>Others</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.Others
+   * @generated
+   */
+  public Adapter createOthersAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.gedcoml.gedcoml.PersonRef <em>Person Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.PersonRef
+   * @generated
+   */
+  public Adapter createPersonRefAdapter()
   {
     return null;
   }

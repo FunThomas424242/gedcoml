@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getId <em>Id</em>}</li>
  *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getNotes <em>Notes</em>}</li>
  *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getBirthName <em>Birth Name</em>}</li>
+ *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getSources <em>Sources</em>}</li>
  * </ul>
  * </p>
  *
@@ -370,5 +371,21 @@ public interface Person extends EObject
    * @generated
    */
   void setBirthName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Sources</b></em>' containment reference list.
+   * The list contents are of type {@link com.github.funthomas424242.gedcoml.gedcoml.Source}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Sources</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Sources</em>' containment reference list.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.GedcomlPackage#getPerson_Sources()
+   * @model containment="true" required="true"
+   * @generated
+   */
+  EList<Source> getSources();
 
 } // Person

@@ -12,9 +12,9 @@ import com.github.funthomas424242.gedcoml.gedcoml.Married;
 import com.github.funthomas424242.gedcoml.gedcoml.Note;
 import com.github.funthomas424242.gedcoml.gedcoml.Person;
 import com.github.funthomas424242.gedcoml.gedcoml.Sexus;
+import com.github.funthomas424242.gedcoml.gedcoml.Source;
 
 import java.util.Collection;
-import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -52,6 +52,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.impl.PersonImpl#getId <em>Id</em>}</li>
  *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.impl.PersonImpl#getNotes <em>Notes</em>}</li>
  *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.impl.PersonImpl#getBirthName <em>Birth Name</em>}</li>
+ *   <li>{@link com.github.funthomas424242.gedcoml.gedcoml.impl.PersonImpl#getSources <em>Sources</em>}</li>
  * </ul>
  * </p>
  *
@@ -278,6 +279,16 @@ public class PersonImpl extends EObjectImpl implements Person
    * @ordered
    */
   protected String birthName = BIRTH_NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getSources() <em>Sources</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSources()
+   * @generated
+   * @ordered
+   */
+  protected EList<Source> sources;
 
   /**
    * <!-- begin-user-doc -->
@@ -631,6 +642,20 @@ public class PersonImpl extends EObjectImpl implements Person
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Source> getSources()
+  {
+    if (sources == null)
+    {
+      sources = new EObjectContainmentEList<Source>(Source.class, this, GedcomlPackage.PERSON__SOURCES);
+    }
+    return sources;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -642,6 +667,8 @@ public class PersonImpl extends EObjectImpl implements Person
         return ((InternalEList<?>)getMarriedWith()).basicRemove(otherEnd, msgs);
       case GedcomlPackage.PERSON__NOTES:
         return ((InternalEList<?>)getNotes()).basicRemove(otherEnd, msgs);
+      case GedcomlPackage.PERSON__SOURCES:
+        return ((InternalEList<?>)getSources()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -686,6 +713,8 @@ public class PersonImpl extends EObjectImpl implements Person
         return getNotes();
       case GedcomlPackage.PERSON__BIRTH_NAME:
         return getBirthName();
+      case GedcomlPackage.PERSON__SOURCES:
+        return getSources();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -747,6 +776,10 @@ public class PersonImpl extends EObjectImpl implements Person
       case GedcomlPackage.PERSON__BIRTH_NAME:
         setBirthName((String)newValue);
         return;
+      case GedcomlPackage.PERSON__SOURCES:
+        getSources().clear();
+        getSources().addAll((Collection<? extends Source>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -803,6 +836,9 @@ public class PersonImpl extends EObjectImpl implements Person
       case GedcomlPackage.PERSON__BIRTH_NAME:
         setBirthName(BIRTH_NAME_EDEFAULT);
         return;
+      case GedcomlPackage.PERSON__SOURCES:
+        getSources().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -845,6 +881,8 @@ public class PersonImpl extends EObjectImpl implements Person
         return notes != null && !notes.isEmpty();
       case GedcomlPackage.PERSON__BIRTH_NAME:
         return BIRTH_NAME_EDEFAULT == null ? birthName != null : !BIRTH_NAME_EDEFAULT.equals(birthName);
+      case GedcomlPackage.PERSON__SOURCES:
+        return sources != null && !sources.isEmpty();
     }
     return super.eIsSet(featureID);
   }

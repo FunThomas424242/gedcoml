@@ -317,13 +317,22 @@ public interface GedcomlPackage extends EPackage
   int PERSON__BIRTH_NAME = 13;
 
   /**
+   * The feature id for the '<em><b>Sources</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PERSON__SOURCES = 14;
+
+  /**
    * The number of structural features of the '<em>Person</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PERSON_FEATURE_COUNT = 14;
+  int PERSON_FEATURE_COUNT = 15;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.FamilyBookImpl <em>Family Book</em>}' class.
@@ -603,6 +612,81 @@ public interface GedcomlPackage extends EPackage
   int AUTHOR_FEATURE_COUNT = 3;
 
   /**
+   * The meta object id for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.SourceImpl <em>Source</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.gedcoml.gedcoml.impl.SourceImpl
+   * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getSource()
+   * @generated
+   */
+  int SOURCE = 10;
+
+  /**
+   * The number of structural features of the '<em>Source</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOURCE_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.OthersImpl <em>Others</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.gedcoml.gedcoml.impl.OthersImpl
+   * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getOthers()
+   * @generated
+   */
+  int OTHERS = 11;
+
+  /**
+   * The feature id for the '<em><b>Description</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OTHERS__DESCRIPTION = SOURCE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Others</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OTHERS_FEATURE_COUNT = SOURCE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.PersonRefImpl <em>Person Ref</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.gedcoml.gedcoml.impl.PersonRefImpl
+   * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getPersonRef()
+   * @generated
+   */
+  int PERSON_REF = 12;
+
+  /**
+   * The feature id for the '<em><b>Person ID</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PERSON_REF__PERSON_ID = SOURCE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Person Ref</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PERSON_REF_FEATURE_COUNT = SOURCE_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link com.github.funthomas424242.gedcoml.gedcoml.Sexus <em>Sexus</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -610,7 +694,7 @@ public interface GedcomlPackage extends EPackage
    * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getSexus()
    * @generated
    */
-  int SEXUS = 10;
+  int SEXUS = 13;
 
 
   /**
@@ -897,6 +981,17 @@ public interface GedcomlPackage extends EPackage
   EAttribute getPerson_BirthName();
 
   /**
+   * Returns the meta object for the containment reference list '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getSources <em>Sources</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Sources</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.Person#getSources()
+   * @see #getPerson()
+   * @generated
+   */
+  EReference getPerson_Sources();
+
+  /**
    * Returns the meta object for class '{@link com.github.funthomas424242.gedcoml.gedcoml.FamilyBook <em>Family Book</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1119,6 +1214,58 @@ public interface GedcomlPackage extends EPackage
    * @generated
    */
   EReference getAuthor_MemberId();
+
+  /**
+   * Returns the meta object for class '{@link com.github.funthomas424242.gedcoml.gedcoml.Source <em>Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Source</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.Source
+   * @generated
+   */
+  EClass getSource();
+
+  /**
+   * Returns the meta object for class '{@link com.github.funthomas424242.gedcoml.gedcoml.Others <em>Others</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Others</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.Others
+   * @generated
+   */
+  EClass getOthers();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.Others#getDescription <em>Description</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Description</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.Others#getDescription()
+   * @see #getOthers()
+   * @generated
+   */
+  EAttribute getOthers_Description();
+
+  /**
+   * Returns the meta object for class '{@link com.github.funthomas424242.gedcoml.gedcoml.PersonRef <em>Person Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Person Ref</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.PersonRef
+   * @generated
+   */
+  EClass getPersonRef();
+
+  /**
+   * Returns the meta object for the reference '{@link com.github.funthomas424242.gedcoml.gedcoml.PersonRef#getPersonID <em>Person ID</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Person ID</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.PersonRef#getPersonID()
+   * @see #getPersonRef()
+   * @generated
+   */
+  EReference getPersonRef_PersonID();
 
   /**
    * Returns the meta object for enum '{@link com.github.funthomas424242.gedcoml.gedcoml.Sexus <em>Sexus</em>}'.
@@ -1368,6 +1515,14 @@ public interface GedcomlPackage extends EPackage
     EAttribute PERSON__BIRTH_NAME = eINSTANCE.getPerson_BirthName();
 
     /**
+     * The meta object literal for the '<em><b>Sources</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PERSON__SOURCES = eINSTANCE.getPerson_Sources();
+
+    /**
      * The meta object literal for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.FamilyBookImpl <em>Family Book</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1548,6 +1703,52 @@ public interface GedcomlPackage extends EPackage
      * @generated
      */
     EReference AUTHOR__MEMBER_ID = eINSTANCE.getAuthor_MemberId();
+
+    /**
+     * The meta object literal for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.SourceImpl <em>Source</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.github.funthomas424242.gedcoml.gedcoml.impl.SourceImpl
+     * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getSource()
+     * @generated
+     */
+    EClass SOURCE = eINSTANCE.getSource();
+
+    /**
+     * The meta object literal for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.OthersImpl <em>Others</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.github.funthomas424242.gedcoml.gedcoml.impl.OthersImpl
+     * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getOthers()
+     * @generated
+     */
+    EClass OTHERS = eINSTANCE.getOthers();
+
+    /**
+     * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OTHERS__DESCRIPTION = eINSTANCE.getOthers_Description();
+
+    /**
+     * The meta object literal for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.PersonRefImpl <em>Person Ref</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.github.funthomas424242.gedcoml.gedcoml.impl.PersonRefImpl
+     * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getPersonRef()
+     * @generated
+     */
+    EClass PERSON_REF = eINSTANCE.getPersonRef();
+
+    /**
+     * The meta object literal for the '<em><b>Person ID</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PERSON_REF__PERSON_ID = eINSTANCE.getPersonRef_PersonID();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.gedcoml.gedcoml.Sexus <em>Sexus</em>}' enum.

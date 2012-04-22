@@ -108,6 +108,24 @@ public interface GedcomlFactory extends EFactory
   Author createAuthor();
 
   /**
+   * Returns a new object of class '<em>Others</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Others</em>'.
+   * @generated
+   */
+  Others createOthers();
+
+  /**
+   * Returns a new object of class '<em>Person Ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Person Ref</em>'.
+   * @generated
+   */
+  PersonRef createPersonRef();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

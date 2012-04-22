@@ -15,10 +15,13 @@ import com.github.funthomas424242.gedcoml.gedcoml.GedcomlFactory;
 import com.github.funthomas424242.gedcoml.gedcoml.GedcomlPackage;
 import com.github.funthomas424242.gedcoml.gedcoml.Married;
 import com.github.funthomas424242.gedcoml.gedcoml.Note;
+import com.github.funthomas424242.gedcoml.gedcoml.Others;
 import com.github.funthomas424242.gedcoml.gedcoml.Person;
+import com.github.funthomas424242.gedcoml.gedcoml.PersonRef;
 import com.github.funthomas424242.gedcoml.gedcoml.PostAddress;
 import com.github.funthomas424242.gedcoml.gedcoml.Projectdescription;
 import com.github.funthomas424242.gedcoml.gedcoml.Sexus;
+import com.github.funthomas424242.gedcoml.gedcoml.Source;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -105,6 +108,27 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
    * @generated
    */
   private EClass authorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sourceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass othersEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass personRefEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -441,6 +465,16 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getPerson_Sources()
+  {
+    return (EReference)personEClass.getEStructuralFeatures().get(14);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getFamilyBook()
   {
     return familyBookEClass;
@@ -651,6 +685,56 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getSource()
+  {
+    return sourceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getOthers()
+  {
+    return othersEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getOthers_Description()
+  {
+    return (EAttribute)othersEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPersonRef()
+  {
+    return personRefEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPersonRef_PersonID()
+  {
+    return (EReference)personRefEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getSexus()
   {
     return sexusEEnum;
@@ -714,6 +798,7 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
     createEAttribute(personEClass, PERSON__ID);
     createEReference(personEClass, PERSON__NOTES);
     createEAttribute(personEClass, PERSON__BIRTH_NAME);
+    createEReference(personEClass, PERSON__SOURCES);
 
     familyBookEClass = createEClass(FAMILY_BOOK);
     createEReference(familyBookEClass, FAMILY_BOOK__PROJECT);
@@ -742,6 +827,14 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
     createEAttribute(authorEClass, AUTHOR__FIRST_NAME);
     createEAttribute(authorEClass, AUTHOR__LAST_NAME);
     createEReference(authorEClass, AUTHOR__MEMBER_ID);
+
+    sourceEClass = createEClass(SOURCE);
+
+    othersEClass = createEClass(OTHERS);
+    createEAttribute(othersEClass, OTHERS__DESCRIPTION);
+
+    personRefEClass = createEClass(PERSON_REF);
+    createEReference(personRefEClass, PERSON_REF__PERSON_ID);
 
     // Create enums
     sexusEEnum = createEEnum(SEXUS);
@@ -777,6 +870,8 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
 
     // Add supertypes to classes
     postAddressEClass.getESuperTypes().add(this.getAddress());
+    othersEClass.getESuperTypes().add(this.getSource());
+    personRefEClass.getESuperTypes().add(this.getSource());
 
     // Initialize classes and features; add operations and parameters
     initEClass(projectdescriptionEClass, Projectdescription.class, "Projectdescription", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -807,6 +902,7 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
     initEAttribute(getPerson_Id(), ecorePackage.getEString(), "id", "", 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPerson_Notes(), this.getNote(), null, "notes", null, 0, -1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPerson_BirthName(), ecorePackage.getEString(), "birthName", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPerson_Sources(), this.getSource(), null, "sources", null, 1, -1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(familyBookEClass, FamilyBook.class, "FamilyBook", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFamilyBook_Project(), this.getProjectdescription(), null, "project", null, 0, 1, FamilyBook.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -835,6 +931,14 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
     initEAttribute(getAuthor_FirstName(), ecorePackage.getEString(), "firstName", null, 1, 1, Author.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAuthor_LastName(), ecorePackage.getEString(), "lastName", null, 1, 1, Author.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAuthor_MemberId(), this.getPerson(), null, "memberId", null, 0, 1, Author.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(sourceEClass, Source.class, "Source", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(othersEClass, Others.class, "Others", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getOthers_Description(), ecorePackage.getEString(), "description", null, 1, 1, Others.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(personRefEClass, PersonRef.class, "PersonRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getPersonRef_PersonID(), this.getPerson(), null, "personID", null, 1, 1, PersonRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(sexusEEnum, Sexus.class, "Sexus");

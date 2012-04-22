@@ -11,8 +11,8 @@ import com.github.funthomas424242.gedcoml.gedcoml.GedcomlPackage;
 import com.github.funthomas424242.gedcoml.gedcoml.Projectdescription;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 

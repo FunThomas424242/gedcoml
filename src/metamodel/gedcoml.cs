@@ -49,7 +49,7 @@ TOKENSTYLES {
 	"Id" COLOR #7F0055, BOLD;
 	"Note" COLOR #7F0055, BOLD;
 	"FamilyBook" COLOR #7F0055, BOLD;
-	"project" COLOR #7F0055, BOLD;
+	"Quellen:" COLOR #7F0055, BOLD;
 	"PostAddress" COLOR #7F0055, BOLD;
 	"Entry:" COLOR #7F0055, BOLD;
 	"Exodus:" COLOR #7F0055, BOLD;
@@ -86,7 +86,7 @@ RULES {
 			  			    "BiologicalParentOf:"  (  biologicalParentOf['"','"'] (",")?  )*  "."
 			  			     marriedWith*
 			  			     addresses+
-			  			     notes* "}";
+			  			     notes* "Quellen:" "{" sources+ "}" "}";
 
 	FamilyImport ::= "import family"  importedResource['"','"']  ".";
 	PostAddress ::= "PostAddress" "{" "Entry:" entry[DATE]  "."
@@ -98,4 +98,6 @@ RULES {
 							  "SeparationDay:" separationDay[DATE]? "."
 							  "Partner:" partner['"','"'] "." "}";
 	Note ::= "Note" "{" content['"','"'] "}";
+	Others ::= "Sonstiges:" description['"','"'] "." ;
+	PersonRef ::= "Person:" personID['"','"'] ".";
 }

@@ -50,6 +50,8 @@
         eType="#//Note" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="birthName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sources" lowerBound="1"
+        upperBound="-1" eType="#//Source" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FamilyBook">
     <eStructuralFeatures xsi:type="ecore:EReference" name="project" eType="#//Projectdescription"
@@ -92,5 +94,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="memberId" eType="#//Person"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Source" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Others" eSuperTypes="#//Source">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersonRef" eSuperTypes="#//Source">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="personID" lowerBound="1"
+        eType="#//Person"/>
   </eClassifiers>
 </ecore:EPackage>

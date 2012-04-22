@@ -10,8 +10,6 @@ import com.github.funthomas424242.gedcoml.gedcoml.GedcomlPackage;
 import com.github.funthomas424242.gedcoml.gedcoml.Married;
 import com.github.funthomas424242.gedcoml.gedcoml.Person;
 
-import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;

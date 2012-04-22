@@ -9,8 +9,6 @@ package com.github.funthomas424242.gedcoml.gedcoml.impl;
 import com.github.funthomas424242.gedcoml.gedcoml.Address;
 import com.github.funthomas424242.gedcoml.gedcoml.GedcomlPackage;
 
-import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
