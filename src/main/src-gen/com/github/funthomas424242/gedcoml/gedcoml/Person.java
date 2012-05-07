@@ -214,7 +214,7 @@ public interface Person extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Addresses</em>' containment reference list.
    * @see com.github.funthomas424242.gedcoml.gedcoml.GedcomlPackage#getPerson_Addresses()
-   * @model containment="true" required="true"
+   * @model containment="true"
    * @generated
    */
   EList<Address> getAddresses();

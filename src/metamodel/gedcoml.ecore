@@ -34,8 +34,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sex" lowerBound="1" eType="#//Sexus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="deathDay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="addresses" lowerBound="1"
-        upperBound="-1" eType="#//Address" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="addresses" upperBound="-1"
+        eType="#//Address" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="biologicalParentOf" upperBound="-1"
         eType="#//Person"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="biologicalFatherIs" lowerBound="1"

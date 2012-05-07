@@ -22,7 +22,7 @@ TOKENS {
 	//DEFINE INTEGER $('-')?('1'..'9')('0'..'9')*|'0'$;
 	//DEFINE FLOAT $('-')?(('1'..'9') ('0'..'9')* | '0') '.' ('0'..'9')+ $;
 	DEFINE ID $('\'')('#')$ + TEXT + $('\'') $;
-	DEFINE DATE $('0'..'9') ('0'..'9') '.' ('0'..'9') ('0'..'9') '.' ('0'..'9') ('0'..'9')('0'..'9') ('0'..'9')$;
+	DEFINE DATE $ 'unbekannt' | ('0'..'9') ('0'..'9') '.' ('0'..'9') ('0'..'9') '.' ('0'..'9') ('0'..'9')('0'..'9') ('0'..'9')$;
 	//DEFINE NUMBER  $('0'..'9')+$;
 }
 
@@ -85,7 +85,7 @@ RULES {
 			  			    "BiologicalMotherIs:"  biologicalMotherIs['"','"'] "."		  			   
 			  			    "BiologicalParentOf:"  (  biologicalParentOf['"','"'] (",")?  )*  "."
 			  			     marriedWith*
-			  			     addresses+
+			  			     addresses*
 			  			     notes* "Quellen:" "{" sources+ "}" "}";
 
 	FamilyImport ::= "import family"  importedResource['"','"']  ".";
