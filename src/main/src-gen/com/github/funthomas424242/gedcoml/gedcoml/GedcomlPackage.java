@@ -188,106 +188,7 @@ public interface GedcomlPackage extends EPackage
    * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getPerson()
    * @generated
    */
-  int PERSON = 2;
-
-  /**
-   * The feature id for the '<em><b>First Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERSON__FIRST_NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Last Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERSON__LAST_NAME = 1;
-
-  /**
-   * The feature id for the '<em><b>Middle Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERSON__MIDDLE_NAME = 2;
-
-  /**
-   * The feature id for the '<em><b>Birth Day</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERSON__BIRTH_DAY = 3;
-
-  /**
-   * The feature id for the '<em><b>Sex</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERSON__SEX = 4;
-
-  /**
-   * The feature id for the '<em><b>Death Day</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERSON__DEATH_DAY = 5;
-
-  /**
-   * The feature id for the '<em><b>Addresses</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERSON__ADDRESSES = 6;
-
-  /**
-   * The feature id for the '<em><b>Biological Parent Of</b></em>' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERSON__BIOLOGICAL_PARENT_OF = 7;
-
-  /**
-   * The feature id for the '<em><b>Biological Father Is</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERSON__BIOLOGICAL_FATHER_IS = 8;
-
-  /**
-   * The feature id for the '<em><b>Biological Mother Is</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERSON__BIOLOGICAL_MOTHER_IS = 9;
-
-  /**
-   * The feature id for the '<em><b>Married With</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERSON__MARRIED_WITH = 10;
+  int PERSON = 14;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -296,34 +197,25 @@ public interface GedcomlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PERSON__ID = 11;
+  int PERSON__ID = 0;
 
   /**
-   * The feature id for the '<em><b>Notes</b></em>' containment reference list.
+   * The feature id for the '<em><b>Addresses</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PERSON__NOTES = 12;
+  int PERSON__ADDRESSES = 1;
 
   /**
-   * The feature id for the '<em><b>Birth Name</b></em>' attribute.
+   * The feature id for the '<em><b>Sex</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PERSON__BIRTH_NAME = 13;
-
-  /**
-   * The feature id for the '<em><b>Sources</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERSON__SOURCES = 14;
+  int PERSON__SEX = 2;
 
   /**
    * The number of structural features of the '<em>Person</em>' class.
@@ -332,7 +224,161 @@ public interface GedcomlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PERSON_FEATURE_COUNT = 15;
+  int PERSON_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.BekanntePersonImpl <em>Bekannte Person</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.gedcoml.gedcoml.impl.BekanntePersonImpl
+   * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getBekanntePerson()
+   * @generated
+   */
+  int BEKANNTE_PERSON = 2;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON__ID = PERSON__ID;
+
+  /**
+   * The feature id for the '<em><b>Addresses</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON__ADDRESSES = PERSON__ADDRESSES;
+
+  /**
+   * The feature id for the '<em><b>Sex</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON__SEX = PERSON__SEX;
+
+  /**
+   * The feature id for the '<em><b>First Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON__FIRST_NAME = PERSON_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Last Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON__LAST_NAME = PERSON_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Middle Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON__MIDDLE_NAME = PERSON_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Birth Day</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON__BIRTH_DAY = PERSON_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Death Day</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON__DEATH_DAY = PERSON_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Biological Parent Of</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON__BIOLOGICAL_PARENT_OF = PERSON_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Biological Father Is</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON__BIOLOGICAL_FATHER_IS = PERSON_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>Biological Mother Is</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON__BIOLOGICAL_MOTHER_IS = PERSON_FEATURE_COUNT + 7;
+
+  /**
+   * The feature id for the '<em><b>Married With</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON__MARRIED_WITH = PERSON_FEATURE_COUNT + 8;
+
+  /**
+   * The feature id for the '<em><b>Notes</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON__NOTES = PERSON_FEATURE_COUNT + 9;
+
+  /**
+   * The feature id for the '<em><b>Birth Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON__BIRTH_NAME = PERSON_FEATURE_COUNT + 10;
+
+  /**
+   * The feature id for the '<em><b>Sources</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON__SOURCES = PERSON_FEATURE_COUNT + 11;
+
+  /**
+   * The number of structural features of the '<em>Bekannte Person</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BEKANNTE_PERSON_FEATURE_COUNT = PERSON_FEATURE_COUNT + 12;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.FamilyBookImpl <em>Family Book</em>}' class.
@@ -687,6 +733,52 @@ public interface GedcomlPackage extends EPackage
   int PERSON_REF_FEATURE_COUNT = SOURCE_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.UnbekanntePersonImpl <em>Unbekannte Person</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.gedcoml.gedcoml.impl.UnbekanntePersonImpl
+   * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getUnbekanntePerson()
+   * @generated
+   */
+  int UNBEKANNTE_PERSON = 13;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNBEKANNTE_PERSON__ID = PERSON__ID;
+
+  /**
+   * The feature id for the '<em><b>Addresses</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNBEKANNTE_PERSON__ADDRESSES = PERSON__ADDRESSES;
+
+  /**
+   * The feature id for the '<em><b>Sex</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNBEKANNTE_PERSON__SEX = PERSON__SEX;
+
+  /**
+   * The number of structural features of the '<em>Unbekannte Person</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNBEKANNTE_PERSON_FEATURE_COUNT = PERSON_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link com.github.funthomas424242.gedcoml.gedcoml.Sexus <em>Sexus</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -694,7 +786,7 @@ public interface GedcomlPackage extends EPackage
    * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getSexus()
    * @generated
    */
-  int SEXUS = 13;
+  int SEXUS = 15;
 
 
   /**
@@ -817,6 +909,148 @@ public interface GedcomlPackage extends EPackage
   EReference getFamily_Imports();
 
   /**
+   * Returns the meta object for class '{@link com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson <em>Bekannte Person</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Bekannte Person</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson
+   * @generated
+   */
+  EClass getBekanntePerson();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getFirstName <em>First Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>First Name</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getFirstName()
+   * @see #getBekanntePerson()
+   * @generated
+   */
+  EAttribute getBekanntePerson_FirstName();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getLastName <em>Last Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Last Name</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getLastName()
+   * @see #getBekanntePerson()
+   * @generated
+   */
+  EAttribute getBekanntePerson_LastName();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getMiddleName <em>Middle Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Middle Name</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getMiddleName()
+   * @see #getBekanntePerson()
+   * @generated
+   */
+  EAttribute getBekanntePerson_MiddleName();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getBirthDay <em>Birth Day</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Birth Day</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getBirthDay()
+   * @see #getBekanntePerson()
+   * @generated
+   */
+  EAttribute getBekanntePerson_BirthDay();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getDeathDay <em>Death Day</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Death Day</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getDeathDay()
+   * @see #getBekanntePerson()
+   * @generated
+   */
+  EAttribute getBekanntePerson_DeathDay();
+
+  /**
+   * Returns the meta object for the reference list '{@link com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getBiologicalParentOf <em>Biological Parent Of</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Biological Parent Of</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getBiologicalParentOf()
+   * @see #getBekanntePerson()
+   * @generated
+   */
+  EReference getBekanntePerson_BiologicalParentOf();
+
+  /**
+   * Returns the meta object for the reference '{@link com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getBiologicalFatherIs <em>Biological Father Is</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Biological Father Is</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getBiologicalFatherIs()
+   * @see #getBekanntePerson()
+   * @generated
+   */
+  EReference getBekanntePerson_BiologicalFatherIs();
+
+  /**
+   * Returns the meta object for the reference '{@link com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getBiologicalMotherIs <em>Biological Mother Is</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Biological Mother Is</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getBiologicalMotherIs()
+   * @see #getBekanntePerson()
+   * @generated
+   */
+  EReference getBekanntePerson_BiologicalMotherIs();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getMarriedWith <em>Married With</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Married With</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getMarriedWith()
+   * @see #getBekanntePerson()
+   * @generated
+   */
+  EReference getBekanntePerson_MarriedWith();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getNotes <em>Notes</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Notes</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getNotes()
+   * @see #getBekanntePerson()
+   * @generated
+   */
+  EReference getBekanntePerson_Notes();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getBirthName <em>Birth Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Birth Name</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getBirthName()
+   * @see #getBekanntePerson()
+   * @generated
+   */
+  EAttribute getBekanntePerson_BirthName();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getSources <em>Sources</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Sources</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson#getSources()
+   * @see #getBekanntePerson()
+   * @generated
+   */
+  EReference getBekanntePerson_Sources();
+
+  /**
    * Returns the meta object for class '{@link com.github.funthomas424242.gedcoml.gedcoml.Person <em>Person</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -825,72 +1059,6 @@ public interface GedcomlPackage extends EPackage
    * @generated
    */
   EClass getPerson();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getFirstName <em>First Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>First Name</em>'.
-   * @see com.github.funthomas424242.gedcoml.gedcoml.Person#getFirstName()
-   * @see #getPerson()
-   * @generated
-   */
-  EAttribute getPerson_FirstName();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getLastName <em>Last Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Last Name</em>'.
-   * @see com.github.funthomas424242.gedcoml.gedcoml.Person#getLastName()
-   * @see #getPerson()
-   * @generated
-   */
-  EAttribute getPerson_LastName();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getMiddleName <em>Middle Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Middle Name</em>'.
-   * @see com.github.funthomas424242.gedcoml.gedcoml.Person#getMiddleName()
-   * @see #getPerson()
-   * @generated
-   */
-  EAttribute getPerson_MiddleName();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getBirthDay <em>Birth Day</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Birth Day</em>'.
-   * @see com.github.funthomas424242.gedcoml.gedcoml.Person#getBirthDay()
-   * @see #getPerson()
-   * @generated
-   */
-  EAttribute getPerson_BirthDay();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getSex <em>Sex</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Sex</em>'.
-   * @see com.github.funthomas424242.gedcoml.gedcoml.Person#getSex()
-   * @see #getPerson()
-   * @generated
-   */
-  EAttribute getPerson_Sex();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getDeathDay <em>Death Day</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Death Day</em>'.
-   * @see com.github.funthomas424242.gedcoml.gedcoml.Person#getDeathDay()
-   * @see #getPerson()
-   * @generated
-   */
-  EAttribute getPerson_DeathDay();
 
   /**
    * Returns the meta object for the containment reference list '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getAddresses <em>Addresses</em>}'.
@@ -904,48 +1072,15 @@ public interface GedcomlPackage extends EPackage
   EReference getPerson_Addresses();
 
   /**
-   * Returns the meta object for the reference list '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getBiologicalParentOf <em>Biological Parent Of</em>}'.
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getSex <em>Sex</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Biological Parent Of</em>'.
-   * @see com.github.funthomas424242.gedcoml.gedcoml.Person#getBiologicalParentOf()
+   * @return the meta object for the attribute '<em>Sex</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.Person#getSex()
    * @see #getPerson()
    * @generated
    */
-  EReference getPerson_BiologicalParentOf();
-
-  /**
-   * Returns the meta object for the reference '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getBiologicalFatherIs <em>Biological Father Is</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Biological Father Is</em>'.
-   * @see com.github.funthomas424242.gedcoml.gedcoml.Person#getBiologicalFatherIs()
-   * @see #getPerson()
-   * @generated
-   */
-  EReference getPerson_BiologicalFatherIs();
-
-  /**
-   * Returns the meta object for the reference '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getBiologicalMotherIs <em>Biological Mother Is</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Biological Mother Is</em>'.
-   * @see com.github.funthomas424242.gedcoml.gedcoml.Person#getBiologicalMotherIs()
-   * @see #getPerson()
-   * @generated
-   */
-  EReference getPerson_BiologicalMotherIs();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getMarriedWith <em>Married With</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Married With</em>'.
-   * @see com.github.funthomas424242.gedcoml.gedcoml.Person#getMarriedWith()
-   * @see #getPerson()
-   * @generated
-   */
-  EReference getPerson_MarriedWith();
+  EAttribute getPerson_Sex();
 
   /**
    * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getId <em>Id</em>}'.
@@ -957,39 +1092,6 @@ public interface GedcomlPackage extends EPackage
    * @generated
    */
   EAttribute getPerson_Id();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getNotes <em>Notes</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Notes</em>'.
-   * @see com.github.funthomas424242.gedcoml.gedcoml.Person#getNotes()
-   * @see #getPerson()
-   * @generated
-   */
-  EReference getPerson_Notes();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getBirthName <em>Birth Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Birth Name</em>'.
-   * @see com.github.funthomas424242.gedcoml.gedcoml.Person#getBirthName()
-   * @see #getPerson()
-   * @generated
-   */
-  EAttribute getPerson_BirthName();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link com.github.funthomas424242.gedcoml.gedcoml.Person#getSources <em>Sources</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Sources</em>'.
-   * @see com.github.funthomas424242.gedcoml.gedcoml.Person#getSources()
-   * @see #getPerson()
-   * @generated
-   */
-  EReference getPerson_Sources();
 
   /**
    * Returns the meta object for class '{@link com.github.funthomas424242.gedcoml.gedcoml.FamilyBook <em>Family Book</em>}'.
@@ -1268,6 +1370,16 @@ public interface GedcomlPackage extends EPackage
   EReference getPersonRef_PersonID();
 
   /**
+   * Returns the meta object for class '{@link com.github.funthomas424242.gedcoml.gedcoml.UnbekanntePerson <em>Unbekannte Person</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Unbekannte Person</em>'.
+   * @see com.github.funthomas424242.gedcoml.gedcoml.UnbekanntePerson
+   * @generated
+   */
+  EClass getUnbekanntePerson();
+
+  /**
    * Returns the meta object for enum '{@link com.github.funthomas424242.gedcoml.gedcoml.Sexus <em>Sexus</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1393,6 +1505,112 @@ public interface GedcomlPackage extends EPackage
     EReference FAMILY__IMPORTS = eINSTANCE.getFamily_Imports();
 
     /**
+     * The meta object literal for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.BekanntePersonImpl <em>Bekannte Person</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.github.funthomas424242.gedcoml.gedcoml.impl.BekanntePersonImpl
+     * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getBekanntePerson()
+     * @generated
+     */
+    EClass BEKANNTE_PERSON = eINSTANCE.getBekanntePerson();
+
+    /**
+     * The meta object literal for the '<em><b>First Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BEKANNTE_PERSON__FIRST_NAME = eINSTANCE.getBekanntePerson_FirstName();
+
+    /**
+     * The meta object literal for the '<em><b>Last Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BEKANNTE_PERSON__LAST_NAME = eINSTANCE.getBekanntePerson_LastName();
+
+    /**
+     * The meta object literal for the '<em><b>Middle Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BEKANNTE_PERSON__MIDDLE_NAME = eINSTANCE.getBekanntePerson_MiddleName();
+
+    /**
+     * The meta object literal for the '<em><b>Birth Day</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BEKANNTE_PERSON__BIRTH_DAY = eINSTANCE.getBekanntePerson_BirthDay();
+
+    /**
+     * The meta object literal for the '<em><b>Death Day</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BEKANNTE_PERSON__DEATH_DAY = eINSTANCE.getBekanntePerson_DeathDay();
+
+    /**
+     * The meta object literal for the '<em><b>Biological Parent Of</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BEKANNTE_PERSON__BIOLOGICAL_PARENT_OF = eINSTANCE.getBekanntePerson_BiologicalParentOf();
+
+    /**
+     * The meta object literal for the '<em><b>Biological Father Is</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BEKANNTE_PERSON__BIOLOGICAL_FATHER_IS = eINSTANCE.getBekanntePerson_BiologicalFatherIs();
+
+    /**
+     * The meta object literal for the '<em><b>Biological Mother Is</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BEKANNTE_PERSON__BIOLOGICAL_MOTHER_IS = eINSTANCE.getBekanntePerson_BiologicalMotherIs();
+
+    /**
+     * The meta object literal for the '<em><b>Married With</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BEKANNTE_PERSON__MARRIED_WITH = eINSTANCE.getBekanntePerson_MarriedWith();
+
+    /**
+     * The meta object literal for the '<em><b>Notes</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BEKANNTE_PERSON__NOTES = eINSTANCE.getBekanntePerson_Notes();
+
+    /**
+     * The meta object literal for the '<em><b>Birth Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BEKANNTE_PERSON__BIRTH_NAME = eINSTANCE.getBekanntePerson_BirthName();
+
+    /**
+     * The meta object literal for the '<em><b>Sources</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BEKANNTE_PERSON__SOURCES = eINSTANCE.getBekanntePerson_Sources();
+
+    /**
      * The meta object literal for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.PersonImpl <em>Person</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1403,36 +1621,12 @@ public interface GedcomlPackage extends EPackage
     EClass PERSON = eINSTANCE.getPerson();
 
     /**
-     * The meta object literal for the '<em><b>First Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Addresses</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PERSON__FIRST_NAME = eINSTANCE.getPerson_FirstName();
-
-    /**
-     * The meta object literal for the '<em><b>Last Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PERSON__LAST_NAME = eINSTANCE.getPerson_LastName();
-
-    /**
-     * The meta object literal for the '<em><b>Middle Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PERSON__MIDDLE_NAME = eINSTANCE.getPerson_MiddleName();
-
-    /**
-     * The meta object literal for the '<em><b>Birth Day</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PERSON__BIRTH_DAY = eINSTANCE.getPerson_BirthDay();
+    EReference PERSON__ADDRESSES = eINSTANCE.getPerson_Addresses();
 
     /**
      * The meta object literal for the '<em><b>Sex</b></em>' attribute feature.
@@ -1443,84 +1637,12 @@ public interface GedcomlPackage extends EPackage
     EAttribute PERSON__SEX = eINSTANCE.getPerson_Sex();
 
     /**
-     * The meta object literal for the '<em><b>Death Day</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PERSON__DEATH_DAY = eINSTANCE.getPerson_DeathDay();
-
-    /**
-     * The meta object literal for the '<em><b>Addresses</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PERSON__ADDRESSES = eINSTANCE.getPerson_Addresses();
-
-    /**
-     * The meta object literal for the '<em><b>Biological Parent Of</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PERSON__BIOLOGICAL_PARENT_OF = eINSTANCE.getPerson_BiologicalParentOf();
-
-    /**
-     * The meta object literal for the '<em><b>Biological Father Is</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PERSON__BIOLOGICAL_FATHER_IS = eINSTANCE.getPerson_BiologicalFatherIs();
-
-    /**
-     * The meta object literal for the '<em><b>Biological Mother Is</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PERSON__BIOLOGICAL_MOTHER_IS = eINSTANCE.getPerson_BiologicalMotherIs();
-
-    /**
-     * The meta object literal for the '<em><b>Married With</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PERSON__MARRIED_WITH = eINSTANCE.getPerson_MarriedWith();
-
-    /**
      * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute PERSON__ID = eINSTANCE.getPerson_Id();
-
-    /**
-     * The meta object literal for the '<em><b>Notes</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PERSON__NOTES = eINSTANCE.getPerson_Notes();
-
-    /**
-     * The meta object literal for the '<em><b>Birth Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PERSON__BIRTH_NAME = eINSTANCE.getPerson_BirthName();
-
-    /**
-     * The meta object literal for the '<em><b>Sources</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PERSON__SOURCES = eINSTANCE.getPerson_Sources();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.FamilyBookImpl <em>Family Book</em>}' class.
@@ -1749,6 +1871,16 @@ public interface GedcomlPackage extends EPackage
      * @generated
      */
     EReference PERSON_REF__PERSON_ID = eINSTANCE.getPersonRef_PersonID();
+
+    /**
+     * The meta object literal for the '{@link com.github.funthomas424242.gedcoml.gedcoml.impl.UnbekanntePersonImpl <em>Unbekannte Person</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.github.funthomas424242.gedcoml.gedcoml.impl.UnbekanntePersonImpl
+     * @see com.github.funthomas424242.gedcoml.gedcoml.impl.GedcomlPackageImpl#getUnbekanntePerson()
+     * @generated
+     */
+    EClass UNBEKANNTE_PERSON = eINSTANCE.getUnbekanntePerson();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.gedcoml.gedcoml.Sexus <em>Sexus</em>}' enum.

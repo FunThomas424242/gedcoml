@@ -90,10 +90,11 @@ public class GedcomlSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GedcomlPackage.PERSON:
+      case GedcomlPackage.BEKANNTE_PERSON:
       {
-        Person person = (Person)theEObject;
-        T result = casePerson(person);
+        BekanntePerson bekanntePerson = (BekanntePerson)theEObject;
+        T result = caseBekanntePerson(bekanntePerson);
+        if (result == null) result = casePerson(bekanntePerson);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -170,6 +171,21 @@ public class GedcomlSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GedcomlPackage.UNBEKANNTE_PERSON:
+      {
+        UnbekanntePerson unbekanntePerson = (UnbekanntePerson)theEObject;
+        T result = caseUnbekanntePerson(unbekanntePerson);
+        if (result == null) result = casePerson(unbekanntePerson);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GedcomlPackage.PERSON:
+      {
+        Person person = (Person)theEObject;
+        T result = casePerson(person);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -202,6 +218,22 @@ public class GedcomlSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFamily(Family object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Bekannte Person</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Bekannte Person</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBekanntePerson(BekanntePerson object)
   {
     return null;
   }
@@ -378,6 +410,22 @@ public class GedcomlSwitch<T> extends Switch<T>
    * @generated
    */
   public T casePersonRef(PersonRef object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Unbekannte Person</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Unbekannte Person</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseUnbekanntePerson(UnbekanntePerson object)
   {
     return null;
   }

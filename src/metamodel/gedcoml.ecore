@@ -24,7 +24,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
         eType="#//FamilyImport" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Person">
+  <eClassifiers xsi:type="ecore:EClass" name="BekanntePerson" eSuperTypes="#//Person">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" lowerBound="1"
@@ -32,10 +32,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="middleName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="birthDay" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sex" lowerBound="1" eType="#//Sexus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="deathDay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="addresses" upperBound="-1"
-        eType="#//Address" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="biologicalParentOf" upperBound="-1"
         eType="#//Person"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="biologicalFatherIs" lowerBound="1"
@@ -44,8 +41,6 @@
         eType="#//Person"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="marriedWith" upperBound="-1"
         eType="#//Married" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="notes" upperBound="-1"
         eType="#//Note" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="birthName" lowerBound="1"
@@ -93,7 +88,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="memberId" eType="#//Person"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memberId" eType="#//BekanntePerson"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Source" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Others" eSuperTypes="#//Source">
@@ -102,6 +97,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PersonRef" eSuperTypes="#//Source">
     <eStructuralFeatures xsi:type="ecore:EReference" name="personID" lowerBound="1"
-        eType="#//Person"/>
+        eType="#//BekanntePerson"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnbekanntePerson" eSuperTypes="#//Person"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Person" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="addresses" upperBound="-1"
+        eType="#//Address" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sex" lowerBound="1" eType="#//Sexus"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -29,22 +29,19 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Family/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Family/imports"/>
     </genClasses>
-    <genClasses ecoreClass="gedcoml.ecore#//Person">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/firstName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/lastName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/middleName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/birthDay"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/sex"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/deathDay"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Person/addresses"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Person/biologicalParentOf"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Person/biologicalFatherIs"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Person/biologicalMotherIs"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Person/marriedWith"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/id"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Person/notes"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/birthName"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Person/sources"/>
+    <genClasses ecoreClass="gedcoml.ecore#//BekanntePerson">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//BekanntePerson/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//BekanntePerson/lastName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//BekanntePerson/middleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//BekanntePerson/birthDay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//BekanntePerson/deathDay"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gedcoml.ecore#//BekanntePerson/biologicalParentOf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gedcoml.ecore#//BekanntePerson/biologicalFatherIs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gedcoml.ecore#//BekanntePerson/biologicalMotherIs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//BekanntePerson/marriedWith"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//BekanntePerson/notes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//BekanntePerson/birthName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//BekanntePerson/sources"/>
     </genClasses>
     <genClasses ecoreClass="gedcoml.ecore#//FamilyBook">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gedcoml.ecore#//FamilyBook/project"/>
@@ -80,6 +77,12 @@
     </genClasses>
     <genClasses ecoreClass="gedcoml.ecore#//PersonRef">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gedcoml.ecore#//PersonRef/personID"/>
+    </genClasses>
+    <genClasses ecoreClass="gedcoml.ecore#//UnbekanntePerson"/>
+    <genClasses ecoreClass="gedcoml.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gedcoml.ecore#//Person/addresses"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gedcoml.ecore#//Person/sex"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -8,6 +8,7 @@ package com.github.funthomas424242.gedcoml.gedcoml.impl;
 
 import com.github.funthomas424242.gedcoml.gedcoml.Address;
 import com.github.funthomas424242.gedcoml.gedcoml.Author;
+import com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson;
 import com.github.funthomas424242.gedcoml.gedcoml.Family;
 import com.github.funthomas424242.gedcoml.gedcoml.FamilyBook;
 import com.github.funthomas424242.gedcoml.gedcoml.FamilyImport;
@@ -23,6 +24,7 @@ import com.github.funthomas424242.gedcoml.gedcoml.Projectdescription;
 import com.github.funthomas424242.gedcoml.gedcoml.Sexus;
 import com.github.funthomas424242.gedcoml.gedcoml.Source;
 
+import com.github.funthomas424242.gedcoml.gedcoml.UnbekanntePerson;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -52,6 +54,13 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
    * @generated
    */
   private EClass familyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass bekanntePersonEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -129,6 +138,13 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
    * @generated
    */
   private EClass personRefEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass unbekanntePersonEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -315,6 +331,136 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getBekanntePerson()
+  {
+    return bekanntePersonEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBekanntePerson_FirstName()
+  {
+    return (EAttribute)bekanntePersonEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBekanntePerson_LastName()
+  {
+    return (EAttribute)bekanntePersonEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBekanntePerson_MiddleName()
+  {
+    return (EAttribute)bekanntePersonEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBekanntePerson_BirthDay()
+  {
+    return (EAttribute)bekanntePersonEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBekanntePerson_DeathDay()
+  {
+    return (EAttribute)bekanntePersonEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBekanntePerson_BiologicalParentOf()
+  {
+    return (EReference)bekanntePersonEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBekanntePerson_BiologicalFatherIs()
+  {
+    return (EReference)bekanntePersonEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBekanntePerson_BiologicalMotherIs()
+  {
+    return (EReference)bekanntePersonEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBekanntePerson_MarriedWith()
+  {
+    return (EReference)bekanntePersonEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBekanntePerson_Notes()
+  {
+    return (EReference)bekanntePersonEClass.getEStructuralFeatures().get(9);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBekanntePerson_BirthName()
+  {
+    return (EAttribute)bekanntePersonEClass.getEStructuralFeatures().get(10);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBekanntePerson_Sources()
+  {
+    return (EReference)bekanntePersonEClass.getEStructuralFeatures().get(11);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getPerson()
   {
     return personEClass;
@@ -325,39 +471,9 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPerson_FirstName()
+  public EReference getPerson_Addresses()
   {
-    return (EAttribute)personEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPerson_LastName()
-  {
-    return (EAttribute)personEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPerson_MiddleName()
-  {
-    return (EAttribute)personEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPerson_BirthDay()
-  {
-    return (EAttribute)personEClass.getEStructuralFeatures().get(3);
+    return (EReference)personEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -367,67 +483,7 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
    */
   public EAttribute getPerson_Sex()
   {
-    return (EAttribute)personEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPerson_DeathDay()
-  {
-    return (EAttribute)personEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPerson_Addresses()
-  {
-    return (EReference)personEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPerson_BiologicalParentOf()
-  {
-    return (EReference)personEClass.getEStructuralFeatures().get(7);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPerson_BiologicalFatherIs()
-  {
-    return (EReference)personEClass.getEStructuralFeatures().get(8);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPerson_BiologicalMotherIs()
-  {
-    return (EReference)personEClass.getEStructuralFeatures().get(9);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPerson_MarriedWith()
-  {
-    return (EReference)personEClass.getEStructuralFeatures().get(10);
+    return (EAttribute)personEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -437,37 +493,7 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
    */
   public EAttribute getPerson_Id()
   {
-    return (EAttribute)personEClass.getEStructuralFeatures().get(11);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPerson_Notes()
-  {
-    return (EReference)personEClass.getEStructuralFeatures().get(12);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPerson_BirthName()
-  {
-    return (EAttribute)personEClass.getEStructuralFeatures().get(13);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPerson_Sources()
-  {
-    return (EReference)personEClass.getEStructuralFeatures().get(14);
+    return (EAttribute)personEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -735,6 +761,16 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getUnbekanntePerson()
+  {
+    return unbekanntePersonEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getSexus()
   {
     return sexusEEnum;
@@ -783,22 +819,19 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
     createEAttribute(familyEClass, FAMILY__NAME);
     createEReference(familyEClass, FAMILY__IMPORTS);
 
-    personEClass = createEClass(PERSON);
-    createEAttribute(personEClass, PERSON__FIRST_NAME);
-    createEAttribute(personEClass, PERSON__LAST_NAME);
-    createEAttribute(personEClass, PERSON__MIDDLE_NAME);
-    createEAttribute(personEClass, PERSON__BIRTH_DAY);
-    createEAttribute(personEClass, PERSON__SEX);
-    createEAttribute(personEClass, PERSON__DEATH_DAY);
-    createEReference(personEClass, PERSON__ADDRESSES);
-    createEReference(personEClass, PERSON__BIOLOGICAL_PARENT_OF);
-    createEReference(personEClass, PERSON__BIOLOGICAL_FATHER_IS);
-    createEReference(personEClass, PERSON__BIOLOGICAL_MOTHER_IS);
-    createEReference(personEClass, PERSON__MARRIED_WITH);
-    createEAttribute(personEClass, PERSON__ID);
-    createEReference(personEClass, PERSON__NOTES);
-    createEAttribute(personEClass, PERSON__BIRTH_NAME);
-    createEReference(personEClass, PERSON__SOURCES);
+    bekanntePersonEClass = createEClass(BEKANNTE_PERSON);
+    createEAttribute(bekanntePersonEClass, BEKANNTE_PERSON__FIRST_NAME);
+    createEAttribute(bekanntePersonEClass, BEKANNTE_PERSON__LAST_NAME);
+    createEAttribute(bekanntePersonEClass, BEKANNTE_PERSON__MIDDLE_NAME);
+    createEAttribute(bekanntePersonEClass, BEKANNTE_PERSON__BIRTH_DAY);
+    createEAttribute(bekanntePersonEClass, BEKANNTE_PERSON__DEATH_DAY);
+    createEReference(bekanntePersonEClass, BEKANNTE_PERSON__BIOLOGICAL_PARENT_OF);
+    createEReference(bekanntePersonEClass, BEKANNTE_PERSON__BIOLOGICAL_FATHER_IS);
+    createEReference(bekanntePersonEClass, BEKANNTE_PERSON__BIOLOGICAL_MOTHER_IS);
+    createEReference(bekanntePersonEClass, BEKANNTE_PERSON__MARRIED_WITH);
+    createEReference(bekanntePersonEClass, BEKANNTE_PERSON__NOTES);
+    createEAttribute(bekanntePersonEClass, BEKANNTE_PERSON__BIRTH_NAME);
+    createEReference(bekanntePersonEClass, BEKANNTE_PERSON__SOURCES);
 
     familyBookEClass = createEClass(FAMILY_BOOK);
     createEReference(familyBookEClass, FAMILY_BOOK__PROJECT);
@@ -836,6 +869,13 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
     personRefEClass = createEClass(PERSON_REF);
     createEReference(personRefEClass, PERSON_REF__PERSON_ID);
 
+    unbekanntePersonEClass = createEClass(UNBEKANNTE_PERSON);
+
+    personEClass = createEClass(PERSON);
+    createEAttribute(personEClass, PERSON__ID);
+    createEReference(personEClass, PERSON__ADDRESSES);
+    createEAttribute(personEClass, PERSON__SEX);
+
     // Create enums
     sexusEEnum = createEEnum(SEXUS);
   }
@@ -869,9 +909,11 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    bekanntePersonEClass.getESuperTypes().add(this.getPerson());
     postAddressEClass.getESuperTypes().add(this.getAddress());
     othersEClass.getESuperTypes().add(this.getSource());
     personRefEClass.getESuperTypes().add(this.getSource());
+    unbekanntePersonEClass.getESuperTypes().add(this.getPerson());
 
     // Initialize classes and features; add operations and parameters
     initEClass(projectdescriptionEClass, Projectdescription.class, "Projectdescription", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -887,22 +929,19 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
     initEAttribute(getFamily_Name(), ecorePackage.getEString(), "name", null, 1, 1, Family.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFamily_Imports(), this.getFamilyImport(), null, "imports", null, 0, -1, Family.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(personEClass, Person.class, "Person", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPerson_FirstName(), ecorePackage.getEString(), "firstName", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPerson_LastName(), ecorePackage.getEString(), "lastName", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPerson_MiddleName(), ecorePackage.getEString(), "middleName", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPerson_BirthDay(), ecorePackage.getEString(), "birthDay", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPerson_Sex(), this.getSexus(), "sex", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPerson_DeathDay(), ecorePackage.getEString(), "deathDay", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPerson_Addresses(), this.getAddress(), null, "addresses", null, 0, -1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPerson_BiologicalParentOf(), this.getPerson(), null, "biologicalParentOf", null, 0, -1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPerson_BiologicalFatherIs(), this.getPerson(), null, "biologicalFatherIs", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPerson_BiologicalMotherIs(), this.getPerson(), null, "biologicalMotherIs", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPerson_MarriedWith(), this.getMarried(), null, "marriedWith", null, 0, -1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPerson_Id(), ecorePackage.getEString(), "id", "", 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPerson_Notes(), this.getNote(), null, "notes", null, 0, -1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPerson_BirthName(), ecorePackage.getEString(), "birthName", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPerson_Sources(), this.getSource(), null, "sources", null, 1, -1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(bekanntePersonEClass, BekanntePerson.class, "BekanntePerson", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBekanntePerson_FirstName(), ecorePackage.getEString(), "firstName", null, 1, 1, BekanntePerson.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBekanntePerson_LastName(), ecorePackage.getEString(), "lastName", null, 1, 1, BekanntePerson.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBekanntePerson_MiddleName(), ecorePackage.getEString(), "middleName", null, 0, 1, BekanntePerson.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBekanntePerson_BirthDay(), ecorePackage.getEString(), "birthDay", null, 1, 1, BekanntePerson.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBekanntePerson_DeathDay(), ecorePackage.getEString(), "deathDay", null, 0, 1, BekanntePerson.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBekanntePerson_BiologicalParentOf(), this.getPerson(), null, "biologicalParentOf", null, 0, -1, BekanntePerson.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBekanntePerson_BiologicalFatherIs(), this.getPerson(), null, "biologicalFatherIs", null, 1, 1, BekanntePerson.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBekanntePerson_BiologicalMotherIs(), this.getPerson(), null, "biologicalMotherIs", null, 1, 1, BekanntePerson.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBekanntePerson_MarriedWith(), this.getMarried(), null, "marriedWith", null, 0, -1, BekanntePerson.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBekanntePerson_Notes(), this.getNote(), null, "notes", null, 0, -1, BekanntePerson.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBekanntePerson_BirthName(), ecorePackage.getEString(), "birthName", null, 1, 1, BekanntePerson.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBekanntePerson_Sources(), this.getSource(), null, "sources", null, 1, -1, BekanntePerson.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(familyBookEClass, FamilyBook.class, "FamilyBook", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFamilyBook_Project(), this.getProjectdescription(), null, "project", null, 0, 1, FamilyBook.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -930,7 +969,7 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
     initEClass(authorEClass, Author.class, "Author", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAuthor_FirstName(), ecorePackage.getEString(), "firstName", null, 1, 1, Author.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAuthor_LastName(), ecorePackage.getEString(), "lastName", null, 1, 1, Author.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAuthor_MemberId(), this.getPerson(), null, "memberId", null, 0, 1, Author.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAuthor_MemberId(), this.getBekanntePerson(), null, "memberId", null, 0, 1, Author.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(sourceEClass, Source.class, "Source", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -938,7 +977,14 @@ public class GedcomlPackageImpl extends EPackageImpl implements GedcomlPackage
     initEAttribute(getOthers_Description(), ecorePackage.getEString(), "description", null, 1, 1, Others.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(personRefEClass, PersonRef.class, "PersonRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPersonRef_PersonID(), this.getPerson(), null, "personID", null, 1, 1, PersonRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPersonRef_PersonID(), this.getBekanntePerson(), null, "personID", null, 1, 1, PersonRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(unbekanntePersonEClass, UnbekanntePerson.class, "UnbekanntePerson", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(personEClass, Person.class, "Person", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPerson_Id(), ecorePackage.getEString(), "id", "", 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPerson_Addresses(), this.getAddress(), null, "addresses", null, 0, -1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPerson_Sex(), this.getSexus(), "sex", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(sexusEEnum, Sexus.class, "Sexus");

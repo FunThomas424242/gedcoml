@@ -45,13 +45,13 @@ public interface GedcomlFactory extends EFactory
   Family createFamily();
 
   /**
-   * Returns a new object of class '<em>Person</em>'.
+   * Returns a new object of class '<em>Bekannte Person</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Person</em>'.
+   * @return a new object of class '<em>Bekannte Person</em>'.
    * @generated
    */
-  Person createPerson();
+  BekanntePerson createBekanntePerson();
 
   /**
    * Returns a new object of class '<em>Family Book</em>'.
@@ -124,6 +124,15 @@ public interface GedcomlFactory extends EFactory
    * @generated
    */
   PersonRef createPersonRef();
+
+  /**
+   * Returns a new object of class '<em>Unbekannte Person</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Unbekannte Person</em>'.
+   * @generated
+   */
+  UnbekanntePerson createUnbekanntePerson();
 
   /**
    * Returns the package supported by this factory.

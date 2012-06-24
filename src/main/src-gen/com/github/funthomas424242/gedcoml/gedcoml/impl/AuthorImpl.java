@@ -7,6 +7,7 @@
 package com.github.funthomas424242.gedcoml.gedcoml.impl;
 
 import com.github.funthomas424242.gedcoml.gedcoml.Author;
+import com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson;
 import com.github.funthomas424242.gedcoml.gedcoml.GedcomlPackage;
 import com.github.funthomas424242.gedcoml.gedcoml.Person;
 
@@ -83,7 +84,7 @@ public class AuthorImpl extends EObjectImpl implements Author
    * @generated
    * @ordered
    */
-  protected Person memberId;
+  protected BekanntePerson memberId;
 
   /**
    * <!-- begin-user-doc -->
@@ -157,12 +158,12 @@ public class AuthorImpl extends EObjectImpl implements Author
    * <!-- end-user-doc -->
    * @generated
    */
-  public Person getMemberId()
+  public BekanntePerson getMemberId()
   {
     if (memberId != null && memberId.eIsProxy())
     {
       InternalEObject oldMemberId = (InternalEObject)memberId;
-      memberId = (Person)eResolveProxy(oldMemberId);
+      memberId = (BekanntePerson)eResolveProxy(oldMemberId);
       if (memberId != oldMemberId)
       {
         if (eNotificationRequired())
@@ -177,7 +178,7 @@ public class AuthorImpl extends EObjectImpl implements Author
    * <!-- end-user-doc -->
    * @generated
    */
-  public Person basicGetMemberId()
+  public BekanntePerson basicGetMemberId()
   {
     return memberId;
   }
@@ -187,9 +188,9 @@ public class AuthorImpl extends EObjectImpl implements Author
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setMemberId(Person newMemberId)
+  public void setMemberId(BekanntePerson newMemberId)
   {
-    Person oldMemberId = memberId;
+    BekanntePerson oldMemberId = memberId;
     memberId = newMemberId;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, GedcomlPackage.AUTHOR__MEMBER_ID, oldMemberId, memberId));
@@ -233,7 +234,7 @@ public class AuthorImpl extends EObjectImpl implements Author
         setLastName((String)newValue);
         return;
       case GedcomlPackage.AUTHOR__MEMBER_ID:
-        setMemberId((Person)newValue);
+        setMemberId((BekanntePerson)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -256,7 +257,7 @@ public class AuthorImpl extends EObjectImpl implements Author
         setLastName(LAST_NAME_EDEFAULT);
         return;
       case GedcomlPackage.AUTHOR__MEMBER_ID:
-        setMemberId((Person)null);
+        setMemberId((BekanntePerson)null);
         return;
     }
     super.eUnset(featureID);

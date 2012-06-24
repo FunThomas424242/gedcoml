@@ -34,12 +34,12 @@ public interface PersonRef extends Source
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Person ID</em>' reference.
-   * @see #setPersonID(Person)
+   * @see #setPersonID(BekanntePerson)
    * @see com.github.funthomas424242.gedcoml.gedcoml.GedcomlPackage#getPersonRef_PersonID()
    * @model required="true"
    * @generated
    */
-  Person getPersonID();
+  BekanntePerson getPersonID();
 
   /**
    * Sets the value of the '{@link com.github.funthomas424242.gedcoml.gedcoml.PersonRef#getPersonID <em>Person ID</em>}' reference.
@@ -49,6 +49,6 @@ public interface PersonRef extends Source
    * @see #getPersonID()
    * @generated
    */
-  void setPersonID(Person value);
+  void setPersonID(BekanntePerson value);
 
 } // PersonRef

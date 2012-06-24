@@ -6,6 +6,7 @@
  */
 package com.github.funthomas424242.gedcoml.gedcoml.impl;
 
+import com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson;
 import com.github.funthomas424242.gedcoml.gedcoml.GedcomlPackage;
 import com.github.funthomas424242.gedcoml.gedcoml.Person;
 import com.github.funthomas424242.gedcoml.gedcoml.PersonRef;
@@ -40,7 +41,7 @@ public class PersonRefImpl extends SourceImpl implements PersonRef
    * @generated
    * @ordered
    */
-  protected Person personID;
+  protected BekanntePerson personID;
 
   /**
    * <!-- begin-user-doc -->
@@ -68,12 +69,12 @@ public class PersonRefImpl extends SourceImpl implements PersonRef
    * <!-- end-user-doc -->
    * @generated
    */
-  public Person getPersonID()
+  public BekanntePerson getPersonID()
   {
     if (personID != null && personID.eIsProxy())
     {
       InternalEObject oldPersonID = (InternalEObject)personID;
-      personID = (Person)eResolveProxy(oldPersonID);
+      personID = (BekanntePerson)eResolveProxy(oldPersonID);
       if (personID != oldPersonID)
       {
         if (eNotificationRequired())
@@ -88,7 +89,7 @@ public class PersonRefImpl extends SourceImpl implements PersonRef
    * <!-- end-user-doc -->
    * @generated
    */
-  public Person basicGetPersonID()
+  public BekanntePerson basicGetPersonID()
   {
     return personID;
   }
@@ -98,9 +99,9 @@ public class PersonRefImpl extends SourceImpl implements PersonRef
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPersonID(Person newPersonID)
+  public void setPersonID(BekanntePerson newPersonID)
   {
-    Person oldPersonID = personID;
+    BekanntePerson oldPersonID = personID;
     personID = newPersonID;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, GedcomlPackage.PERSON_REF__PERSON_ID, oldPersonID, personID));
@@ -134,7 +135,7 @@ public class PersonRefImpl extends SourceImpl implements PersonRef
     switch (featureID)
     {
       case GedcomlPackage.PERSON_REF__PERSON_ID:
-        setPersonID((Person)newValue);
+        setPersonID((BekanntePerson)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -151,7 +152,7 @@ public class PersonRefImpl extends SourceImpl implements PersonRef
     switch (featureID)
     {
       case GedcomlPackage.PERSON_REF__PERSON_ID:
-        setPersonID((Person)null);
+        setPersonID((BekanntePerson)null);
         return;
     }
     super.eUnset(featureID);

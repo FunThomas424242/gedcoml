@@ -72,8 +72,12 @@ RULES {
 		"publishingDate:" publishingDate[DATE] "."
 		imports* "}";
 	Author::= "Author" "{" "FirstName:" firstName['"','"'] "LastName:" lastName['"','"'] "MemberId:" memberId['"','"']? ;
-	Family ::= "Family"  name['"','"'] "{" imports* members+  "}";
-	Person ::= "Person" "{" "Id" ":" id['"','"'] "."
+	Family ::= "Family"  name['"','"'] "{" imports* members+  "}"; 
+	UnbekanntePerson ::= "UnbekanntePerson" "{" "Id:" id['"','"'] "." 
+						 "Sex:" sex[male:"male", female:"female", undefined:"undefined"] "."
+							addresses*
+						  "}";
+	BekanntePerson ::=  "Person" "{" "Id:" id['"','"'] "."
 							"Name at birth:" birthName['"','"'] "."
 							"FirstName:" firstName['"','"'] "."
 							"MiddleName:" middleName['"','"']? "."

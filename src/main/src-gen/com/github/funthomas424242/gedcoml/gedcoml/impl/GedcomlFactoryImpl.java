@@ -71,7 +71,7 @@ public class GedcomlFactoryImpl extends EFactoryImpl implements GedcomlFactory
     {
       case GedcomlPackage.PROJECTDESCRIPTION: return createProjectdescription();
       case GedcomlPackage.FAMILY: return createFamily();
-      case GedcomlPackage.PERSON: return createPerson();
+      case GedcomlPackage.BEKANNTE_PERSON: return createBekanntePerson();
       case GedcomlPackage.FAMILY_BOOK: return createFamilyBook();
       case GedcomlPackage.FAMILY_IMPORT: return createFamilyImport();
       case GedcomlPackage.POST_ADDRESS: return createPostAddress();
@@ -80,6 +80,7 @@ public class GedcomlFactoryImpl extends EFactoryImpl implements GedcomlFactory
       case GedcomlPackage.AUTHOR: return createAuthor();
       case GedcomlPackage.OTHERS: return createOthers();
       case GedcomlPackage.PERSON_REF: return createPersonRef();
+      case GedcomlPackage.UNBEKANNTE_PERSON: return createUnbekanntePerson();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -146,10 +147,10 @@ public class GedcomlFactoryImpl extends EFactoryImpl implements GedcomlFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Person createPerson()
+  public BekanntePerson createBekanntePerson()
   {
-    PersonImpl person = new PersonImpl();
-    return person;
+    BekanntePersonImpl bekanntePerson = new BekanntePersonImpl();
+    return bekanntePerson;
   }
 
   /**
@@ -238,6 +239,17 @@ public class GedcomlFactoryImpl extends EFactoryImpl implements GedcomlFactory
   {
     PersonRefImpl personRef = new PersonRefImpl();
     return personRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public UnbekanntePerson createUnbekanntePerson()
+  {
+    UnbekanntePersonImpl unbekanntePerson = new UnbekanntePersonImpl();
+    return unbekanntePerson;
   }
 
   /**

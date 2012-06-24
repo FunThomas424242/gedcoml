@@ -6,6 +6,7 @@
  */
 package com.github.funthomas424242.gedcoml.gedcoml.impl;
 
+import com.github.funthomas424242.gedcoml.gedcoml.BekanntePerson;
 import com.github.funthomas424242.gedcoml.gedcoml.GedcomlPackage;
 import com.github.funthomas424242.gedcoml.gedcoml.Married;
 import com.github.funthomas424242.gedcoml.gedcoml.Person;

@@ -89,12 +89,12 @@ public interface Author extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Member Id</em>' reference.
-   * @see #setMemberId(Person)
+   * @see #setMemberId(BekanntePerson)
    * @see com.github.funthomas424242.gedcoml.gedcoml.GedcomlPackage#getAuthor_MemberId()
    * @model
    * @generated
    */
-  Person getMemberId();
+  BekanntePerson getMemberId();
 
   /**
    * Sets the value of the '{@link com.github.funthomas424242.gedcoml.gedcoml.Author#getMemberId <em>Member Id</em>}' reference.
@@ -104,6 +104,6 @@ public interface Author extends EObject
    * @see #getMemberId()
    * @generated
    */
-  void setMemberId(Person value);
+  void setMemberId(BekanntePerson value);
 
 } // Author
