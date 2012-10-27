@@ -1,6 +1,14 @@
 // The git repository at eclpise.org that contains the slideshow example.
 // Use the 'git:' prefix to clone a git repository.
  
+// Remote BuildBoost Extensions
+git:https://github.com/DevBoost/BuildBoost.git!Extensions/EMF/
+git:https://github.com/DevBoost/BuildBoost.git!Extensions/EMFText/
+git:https://github.com/DevBoost/BuildBoost.git!Extensions/EMFTextExamples/
+git:https://github.com/DevBoost/BuildBoost.git!Extensions/JUnit/
+git:https://github.com/DevBoost/BuildBoost.git!Extensions/UpdateSite/
+ 
+ 
 //Only dependencies without the rootRepository ->duplicate target exception
 //git:https://github.com/FunThomas424242/com.github.funthomas424242.gedcoml.git
 
@@ -11,34 +19,16 @@ git:https://github.com/DevBoost/EMFText.git!Core/Commons/
 git:https://github.com/DevBoost/EMFText.git!Core/FeaturesCommons/
 git:https://github.com/DevBoost/EMFText.git!Core/License/
 
-
-// Remote BuildBoost Extensions
-git:https://github.com/DevBoost/BuildBoost.git!Extensions/JUnit/
-git:https://github.com/DevBoost/BuildBoost.git!Extensions/EMF/
-git:https://github.com/DevBoost/BuildBoost.git!Extensions/EMFText/
-git:https://github.com/DevBoost/BuildBoost.git!Extensions/EMFTextExamples/
-//git:https://github.com/DevBoost/BuildBoost.git!Extensions/Maven/
-//git:https://github.com/DevBoost/BuildBoost.git!Extensions/Product/
-//git:https://github.com/DevBoost/BuildBoost.git!Extensions/UpdateSite/
-//git:https://github.com/DevBoost/BuildBoost.git!Extensions/WebAppPackaging/
-
-// Local BuildBoost Extensions
-//git:file:///c:/Users/SchubertT006/git/BuildBoost!Extensions/JUnit/
-//git:file:///c:/Users/SchubertT006/git/BuildBoost!Extensions/EMF/
-//git:file:///c:/Users/SchubertT006/git/BuildBoost!Extensions/EMFText/
-//git:file:///c:/Users/SchubertT006/git/BuildBoost!Extensions/EMFTextExamples/
-//git:file:///c:/Users/SchubertT006/git/BuildBoost!Extensions/Maven/
-//git:file:///c:/Users/SchubertT006/git/BuildBoost!Extensions/Product/
-//git:file:///c:/Users/SchubertT006/git/BuildBoost!Extensions/UpdateSite/
-//git:file:///c:/Users/SchubertT006/git/BuildBoost!Extensions/WebAppPackaging/
-
+// CommentTemplate
+git:https://github.com/DevBoost/CommentTemplate.git!Core/
+// JaMoPP
+git:https://github.com/DevBoost/JaMoPP.git!Core/
 
 // Eclipse Platform
-get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/eclipse/downloads/drops/R-3.7.2-201202080800/eclipse-platform-3.7.2-win32-x86_64.zip
-get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/eclipse/downloads/drops/R-3.7.2-201202080800/eclipse-3.7.2-delta-pack.zip
-get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/eclipse/downloads/drops/R-3.7.2-201202080800/org.eclipse.jdt-3.7.2.zip
-
-
+get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/eclipse/downloads/drops4/R-4.2-201206081400/eclipse-platform-4.2-win32-x86_64.zip
+get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/eclipse/downloads/drops4/R-4.2-201206081400/eclipse-4.2-delta-pack.zip
+// JDT
+get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/eclipse/downloads/drops4/R-4.2-201206081400/org.eclipse.jdt-4.2.zip
 // EMF
 get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/modeling/emf/emf/downloads/drops/2.8.0/R201206080554/emf-xsd-SDK-2.8.0.zip
 // EMF Validation (core plugin and feature)
