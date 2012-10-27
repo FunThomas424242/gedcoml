@@ -1,8 +1,8 @@
 // The git repository at eclpise.org that contains the slideshow example.
 // Use the 'git:' prefix to clone a git repository.
  
-//Only dependencies not the ProjectRoot ->duplicate target exception
-git:https://github.com/FunThomas424242/com.github.funthomas424242.gedcoml.git
+//Only dependencies without the rootRepository ->duplicate target exception
+//git:https://github.com/FunThomas424242/com.github.funthomas424242.gedcoml.git
 
 // EMFText
 git:https://github.com/DevBoost/EMFText.git!Core/Access/
