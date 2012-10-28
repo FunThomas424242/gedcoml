@@ -6,3 +6,6 @@
 /build.properties
 /newProject.zip
 /plugin.xml
+/bin
+/src-gen
+/.classpath

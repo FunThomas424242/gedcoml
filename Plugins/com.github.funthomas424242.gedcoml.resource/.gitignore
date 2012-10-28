@@ -4,3 +4,6 @@
 /target
 /build.properties
 /plugin.xml
+/bin
+/src-gen
+/.classpath
