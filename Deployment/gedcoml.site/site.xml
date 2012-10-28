@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/gedcoml.feature_1.0.0.jar" id="gedcoml.feature" version="1.0.0">
+      <category name="funthomas424242/github"/>
+   </feature>
+   <category-def name="funthomas424242/github" label="FunThomas424242 on GitHub">
+      <description>
+         All features by FunThomas424242 hosted at github.
+      </description>
+   </category-def>
+</site>
