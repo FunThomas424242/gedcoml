@@ -10,10 +10,10 @@ OPTIONS{
  resourcePluginID="com.github.funthomas424242.gedcoml.resource";
  resourceUIPluginID="com.github.funthomas424242.gedcoml.ui";
  basePackage="com.github.funthomas424242.gedcoml.resource";
- srcFolder="src/main/java";
- srcGenFolder="target/generated-sources";
- uiSrcFolder="src/main/java";
- uiSrcGenFolder="target/generated-sources";
+ srcFolder="src";
+ srcGenFolder="src-gen";
+ uiSrcFolder="src";
+ uiSrcGenFolder="src-gen";
 }
 
 
