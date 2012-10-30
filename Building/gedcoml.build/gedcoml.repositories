@@ -38,7 +38,8 @@ get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/modeling/emf/validation
 get:http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/modeling/emf/validation/downloads/drops/1.6.0/R201206271200/emf-validation-runtime-1.6.0.zip!eclipse/features/org.eclipse.emf.validation_1.6.0.v20120328-0001-479-9oB56N5BBR6LCA6/feature.xml
 
 //Acceleo
-get:http://download.forge.objectweb.org/acceleo/eclipse-galileo-modeling-acceleo-2.8.0.win32.zip
+//get:http://download.forge.objectweb.org/acceleo/eclipse-galileo-modeling-acceleo-2.8.0.win32.zip
+get:http://download.forge.objectweb.org/acceleo/acceleo-2.8.0-runtime.zip
 
 // Feedback
 //git:https://github.com/DevBoost/Feedback.git!Core/
