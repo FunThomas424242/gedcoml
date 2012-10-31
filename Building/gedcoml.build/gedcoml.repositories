@@ -51,7 +51,7 @@ get:http://repo1.maven.org/maven2/com/google/guava/guava/13.0-rc1/guava-13.0-rc1
 
 //Acceleo
 //get:http://download.forge.objectweb.org/acceleo/eclipse-galileo-modeling-acceleo-2.8.0.win32.zip
-get:http://download.forge.objectweb.org/acceleo/acceleo-2.8.0-runtime.zip
+//get:http://download.forge.objectweb.org/acceleo/acceleo-2.8.0-runtime.zip
 //get:http://download.forge.objectweb.org/acceleo/acceleo-2.8.0-sdk.zip
 get:http://download.forge.objectweb.org/acceleo/eclipse-modeling-indigo-win32.zip
 
