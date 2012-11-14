@@ -18,7 +18,7 @@
         <acceleoCompiler 
             sourceFolder="${target.folder}"
             outputFolder="${target.folder}"
-            dependencies=""
+            dependencies="${target.folder}/../../com.github.funthomas424242.gedcoml;"
             binaryResource="false"
             packagesToRegister="">
         </acceleoCompiler>
