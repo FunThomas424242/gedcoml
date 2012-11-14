@@ -9,4 +9,4 @@ jdk:
   
 language: java
 # script: "ant -Djava.util.logging.config.file='logging.properties' -DrootRepository='git:https://github.com/FunThomas424242/gedcoml.git'"
-script: "ant -DrootRepository='git:https://github.com/FunThomas424242/gedcoml.git' 1>out.log"
+script: "ant -DrootRepository='git:https://github.com/FunThomas424242/gedcoml.git'"
