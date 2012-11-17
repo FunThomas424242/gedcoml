@@ -1,4 +1,4 @@
-[comment encoding = UTF-8 /]
+﻿[comment encoding = UTF-8 /]
 [module pom('http://com.github.funthomas424242/language/gedcoml')/]
 [import com::github::funthomas424242::gedcoml::templates::queries /]
 
