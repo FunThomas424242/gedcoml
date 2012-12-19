@@ -9,7 +9,7 @@ git:https://github.com/DevBoost/BuildBoost.git!Extensions/JUnit/
 git:https://github.com/DevBoost/BuildBoost.git!Extensions/UpdateSite/
 
 // Owned BuildBoost Extensions
-git:https://github.com/FunThomas424242/BoostX.git!Extensions/Acceleo/
+//git:https://github.com/FunThomas424242/BoostX.git!Extensions/Acceleo/
  
  
 //Only dependencies without the rootRepository ->duplicate target exception
