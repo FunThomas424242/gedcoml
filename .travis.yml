@@ -1,5 +1,5 @@
-before_script:
-  - wget -N http://buildboost.org/build.xml
+#before_script:
+#  - wget -N http://buildboost.org/build.xml
   
 jdk:
   - openjdk6
