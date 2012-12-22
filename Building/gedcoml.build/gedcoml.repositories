@@ -12,7 +12,7 @@ git:https://github.com/FunThomas424242/BuildBoost.git!Extensions/UpdateSite/
 //git:https://github.com/FunThomas424242/BoostX.git!Extensions/Acceleo/
  
  
-//Only dependencies without the rootRepository ->duplicate target exception
+//Only dependencies without the rootRepository ->duplicate target exception 
 //git:https://github.com/FunThomas424242/com.github.funthomas424242.gedcoml.git
 
 // EMFText
