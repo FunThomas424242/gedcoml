@@ -15,7 +15,7 @@ git:https://github.com/FunThomas424242/BuildBoost.git!Extensions/UpdateSite/
 //Only dependencies without the rootRepository ->duplicate target exception
 //git:https://github.com/FunThomas424242/com.github.funthomas424242.gedcoml.git
 
-// EMFText
+// EMFText 
 git:https://github.com/DevBoost/EMFText.git!Core/Access/
 git:https://github.com/DevBoost/EMFText.git!Core/SDK/
 git:https://github.com/DevBoost/EMFText.git!Core/Commons/
