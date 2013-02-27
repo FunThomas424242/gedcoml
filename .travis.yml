@@ -1,4 +1,4 @@
-#before_script:
+before_script:
   - wget -N http://buildboost.org/build.xml
   
 jdk:
